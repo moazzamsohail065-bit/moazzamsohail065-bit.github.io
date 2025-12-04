@@ -3,44 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moazzam Hub - Pro Downloader</title>
+    <title>Moazzam Hub - Fast Tools</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { background-color: #eef2f5; font-family: 'Poppins', sans-serif; }
-        .navbar { background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%); }
+        body { background-color: #f4f7f6; font-family: 'Segoe UI', sans-serif; }
+        
+        /* Navbar */
+        .navbar { background: linear-gradient(to right, #2c3e50, #4ca1af); }
         .navbar-brand { font-weight: bold; color: white !important; }
-        .hero { background: white; padding: 30px 20px; text-align: center; border-radius: 0 0 40px 40px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-bottom: 20px; }
-        .feature-card { border: none; border-radius: 15px; padding: 15px; background: white; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); height: 100%; cursor: pointer; }
-        .ad-container { text-align: center; margin: 15px auto; padding: 10px; background: #fff; border: 2px solid #eee; border-radius: 10px; max-width: 340px; }
-        .section-view { display: none; animation: fadeIn 0.4s; }
+
+        /* Hero */
+        .hero {
+            background: white; padding: 40px 20px; text-align: center;
+            border-bottom-right-radius: 50px; border-bottom-left-radius: 50px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1); margin-bottom: 20px;
+        }
+
+        /* Ad Box */
+        .ad-container {
+            text-align: center; margin: 20px auto; padding: 10px;
+            background: #fff; border: 1px dashed #999; max-width: 320px;
+        }
+
+        /* Feature Cards */
+        .feature-card {
+            border: none; border-radius: 15px; padding: 20px;
+            background: white; text-align: center; transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05); cursor: pointer; height: 100%;
+        }
+        .feature-card:hover { transform: translateY(-5px); border: 1px solid #4ca1af; }
+
+        /* Game Board */
+        .game-board { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; max-width: 220px; margin: 10px auto; }
+        .cell {
+            width: 65px; height: 65px; background: #fff; border: 2px solid #333;
+            font-size: 32px; font-weight: bold; display: flex; align-items: center;
+            justify-content: center; cursor: pointer; border-radius: 8px;
+        }
+
+        /* Sections */
+        .section-view { display: none; animation: fadeIn 0.3s; }
         .active-view { display: block; }
         @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
-        
-        /* Video Player Style */
-        #video-player { width: 100%; max-width: 300px; border-radius: 10px; margin-top: 10px; display: none; }
-        .result-box { display: none; background: #dff9fb; padding: 15px; border-radius: 15px; margin-top: 20px; border: 2px solid #c7ecee; }
     </style>
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand navbar-dark sticky-top">
+<nav class="navbar navbar-dark sticky-top">
     <div class="container">
-        <a class="navbar-brand" href="#" onclick="showHome()"><i class="fas fa-bolt"></i> Moazzam Hub</a>
-        <button class="btn btn-sm btn-light rounded-pill ms-auto fw-bold" onclick="showHome()">Home</button>
+        <a class="navbar-brand" href="#" onclick="showHome()"><i class="fas fa-layer-group"></i> Moazzam Hub</a>
+        <button class="btn btn-sm btn-outline-light rounded-pill ms-auto" onclick="showHome()">Menu</button>
     </div>
 </nav>
 
-<!-- 1. HOME DASHBOARD -->
+<!-- 1. HOME SCREEN -->
 <div id="home-view" class="section-view active-view">
     <div class="hero">
-        <h2 class="fw-bold">All-in-One Toolkit</h2>
-        <p class="text-muted small">TikTok Downloader (On-Site) • Notes • Games</p>
+        <h2 class="fw-bold">Welcome Moazzam Hub</h2>
+        <p class="text-muted">Download Videos • Study Notes • Play Games</p>
     </div>
 
     <!-- 💰 AD SPOT 1 -->
     <div class="ad-container">
+        <small class="text-muted">Sponsored Ad</small><br>
         <script type="text/javascript" src="//pl28185755.effectivegatecpm.com/09/a8/5f/09a85fb4fd4acbfb73562548f399f7b7.js"></script>
     </div>
 
@@ -48,68 +75,54 @@
         <div class="row g-3">
             <div class="col-6">
                 <div class="feature-card" onclick="showSection('downloader-view')">
-                    <div class="text-danger fs-1"><i class="fas fa-cloud-download-alt"></i></div>
+                    <div class="text-danger fs-1"><i class="fas fa-download"></i></div>
                     <h6 class="mt-2 fw-bold">Downloader</h6>
-                    <small class="text-muted">TikTok & More</small>
+                    <small>Save Videos</small>
                 </div>
             </div>
             <div class="col-6">
                 <div class="feature-card" onclick="showSection('student-view')">
-                    <div class="text-primary fs-1"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="text-primary fs-1"><i class="fas fa-book-reader"></i></div>
                     <h6 class="mt-2 fw-bold">Notes</h6>
-                    <small class="text-muted">Class 9-12</small>
+                    <small>Class 9-12</small>
                 </div>
             </div>
             <div class="col-6">
                 <div class="feature-card" onclick="showSection('game-view')">
                     <div class="text-warning fs-1"><i class="fas fa-gamepad"></i></div>
-                    <h6 class="mt-2 fw-bold">Games</h6>
-                    <small class="text-muted">Play Now</small>
+                    <h6 class="mt-2 fw-bold">Game</h6>
+                    <small>Tic Tac Toe</small>
                 </div>
             </div>
-             <div class="col-6">
-                <div class="feature-card" onclick="showSection('calc-view')">
-                    <div class="text-success fs-1"><i class="fas fa-calculator"></i></div>
-                    <h6 class="mt-2 fw-bold">Calc</h6>
-                    <small class="text-muted">% Result</small>
+            <div class="col-6">
+                <div class="feature-card" onclick="showSection('quiz-view')">
+                    <div class="text-info fs-1"><i class="fas fa-lightbulb"></i></div>
+                    <h6 class="mt-2 fw-bold">Quiz</h6>
+                    <small>IQ Test</small>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<!-- 2. SMART DOWNLOADER -->
+<!-- 2. DOWNLOADER (The Requested Feature) -->
 <div id="downloader-view" class="section-view container mt-3">
     <button class="btn btn-secondary btn-sm rounded-pill mb-3" onclick="showHome()">← Back</button>
     
     <div class="card p-4 border-0 shadow rounded-4 text-center">
-        <h4 class="text-danger fw-bold"><i class="fab fa-tiktok"></i> <i class="fab fa-instagram"></i> Pro Downloader</h4>
-        <p class="text-muted small">TikTok Videos YAHIN download hongi!</p>
+        <h3 class="fw-bold text-dark mb-3">Video Downloader</h3>
+        <p class="text-muted small">Link paste karein. System khud Best Server open karega.</p>
+
+        <div class="input-group mb-3">
+            <input type="text" id="dlUrl" class="form-control" placeholder="Paste TikTok / Insta / YT Link...">
+        </div>
+
+        <button class="btn btn-danger w-100 rounded-pill fw-bold py-2" onclick="startDownload()">
+            <i class="fas fa-cloud-download-alt"></i> Start Download
+        </button>
         
-        <div class="input-group">
-            <input type="text" id="dlUrl" class="form-control" placeholder="Paste Video Link...">
-            <button class="btn btn-dark" onclick="processVideo()"><i class="fas fa-search"></i></button>
-        </div>
-
-        <!-- Loading -->
-        <div id="loading" class="mt-3" style="display:none;">
-            <div class="spinner-border text-danger" role="status"></div>
-            <p class="small fw-bold mt-2">Connecting to Server...</p>
-        </div>
-
-        <!-- Result Box (For TikTok) -->
-        <div id="result-box" class="result-box">
-            <h5 class="fw-bold text-success">✅ Video Found!</h5>
-            
-            <!-- Video Player -->
-            <video id="video-player" controls playsinline></video>
-            
-            <a id="download-btn" href="#" class="btn btn-success w-100 rounded-pill fw-bold shadow mt-3" download>
-                <i class="fas fa-download"></i> Download Video
-            </a>
-            <a id="music-btn" href="#" class="btn btn-outline-primary w-100 rounded-pill btn-sm mt-2" download>
-                <i class="fas fa-music"></i> Download Music
-            </a>
+        <div id="loadingMsg" class="mt-3 text-success fw-bold" style="display:none;">
+            <i class="fas fa-spinner fa-spin"></i> Connecting to Secure Server...
         </div>
 
         <!-- 💰 AD SPOT 2 -->
@@ -122,37 +135,40 @@
 <!-- 3. STUDENT NOTES -->
 <div id="student-view" class="section-view container mt-3">
     <button class="btn btn-secondary btn-sm rounded-pill mb-3" onclick="showHome()">← Back</button>
-    <div class="card p-3 border-0 shadow-sm rounded-4">
+    <div class="card p-4 border-0 shadow rounded-4">
         <h4 class="text-primary fw-bold">📚 Notes Library</h4>
         <div class="list-group mt-3">
-            <a href="#" class="list-group-item d-flex justify-content-between"><span>Physics 9th</span> <span class="badge bg-primary">PDF</span></a>
-            <a href="#" class="list-group-item d-flex justify-content-between"><span>Math 10th</span> <span class="badge bg-primary">PDF</span></a>
+            <!-- Apne Google Drive Links Yahan Dalein -->
+            <a href="#" class="list-group-item d-flex justify-content-between"><span>Physics 9th</span> <span class="badge bg-primary">Download</span></a>
+            <a href="#" class="list-group-item d-flex justify-content-between"><span>Math 10th</span> <span class="badge bg-primary">Download</span></a>
+            <a href="#" class="list-group-item d-flex justify-content-between"><span>English 11th</span> <span class="badge bg-primary">Download</span></a>
         </div>
     </div>
 </div>
 
-<!-- 4. GAMES -->
+<!-- 4. GAME (Tic Tac Toe) -->
 <div id="game-view" class="section-view container mt-3 text-center">
     <button class="btn btn-secondary btn-sm rounded-pill mb-3" onclick="showHome()">← Back</button>
     <div class="card p-4 border-0 shadow rounded-4">
-        <h3 class="fw-bold text-warning">Tic Tac Toe</h3>
-        <p>Game is loading...</p>
-        <button class="btn btn-outline-dark" onclick="alert('Game Reset!')">Restart</button>
+        <h4 class="fw-bold text-warning">Tic Tac Toe</h4>
+        <div class="game-board">
+            <div class="cell" onclick="play(0)"></div><div class="cell" onclick="play(1)"></div><div class="cell" onclick="play(2)"></div>
+            <div class="cell" onclick="play(3)"></div><div class="cell" onclick="play(4)"></div><div class="cell" onclick="play(5)"></div>
+            <div class="cell" onclick="play(6)"></div><div class="cell" onclick="play(7)"></div><div class="cell" onclick="play(8)"></div>
+        </div>
+        <h5 id="gStatus" class="mt-2 text-primary">Player X's Turn</h5>
+        <button class="btn btn-outline-danger btn-sm mt-2" onclick="resetG()">Reset</button>
     </div>
 </div>
 
-<!-- 5. CALCULATOR -->
-<div id="calc-view" class="section-view container mt-3">
+<!-- 5. QUIZ -->
+<div id="quiz-view" class="section-view container mt-3">
     <button class="btn btn-secondary btn-sm rounded-pill mb-3" onclick="showHome()">← Back</button>
-    <div class="card p-4 shadow border-0 rounded-4">
-         <h4 class="text-center">Percentage Calc</h4>
-         <input type="number" id="ob" class="form-control mb-2" placeholder="Obtained Marks">
-         <input type="number" id="tot" class="form-control mb-2" placeholder="Total Marks">
-         <button class="btn btn-success w-100" onclick="
-            let o=document.getElementById('ob').value;
-            let t=document.getElementById('tot').value;
-            if(o&&t) alert('Percentage: ' + (o/t*100).toFixed(2) + '%');
-         ">Calculate</button>
+    <div class="card p-4 border-0 shadow rounded-4 text-center">
+        <h4 class="fw-bold text-info">General Knowledge</h4>
+        <h5 id="qText" class="mt-3">Loading...</h5>
+        <div id="qOpts" class="d-grid gap-2 mt-3"></div>
+        <button class="btn btn-primary mt-3" onclick="loadQ()">Next Question</button>
     </div>
 </div>
 
@@ -160,7 +176,7 @@
     &copy; 2025 Moazzam Hub
 </footer>
 
-<!-- LOGIC SCRIPT -->
+<!-- JAVASCRIPT LOGIC -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
     // Navigation
@@ -170,81 +186,80 @@
     }
     function showHome() { showSection('home-view'); }
 
-    // --- 🚀 NEW HYBRID DOWNLOADER LOGIC ---
-    async function processVideo() {
+    // --- DOWNLOADER LOGIC (RELIABLE REDIRECT) ---
+    function startDownload() {
         let url = document.getElementById('dlUrl').value.trim();
-        let loader = document.getElementById('loading');
-        let resultBox = document.getElementById('result-box');
+        let msg = document.getElementById('loadingMsg');
         
-        if(!url) { alert("Please link paste karein!"); return; }
+        if(!url) { alert("Please pehle Link paste karein!"); return; }
 
-        loader.style.display = 'block';
-        resultBox.style.display = 'none';
+        msg.style.display = 'block';
+        msg.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Finding Best Server...';
 
-        // 1. TIKTOK LOGIC (WORKS ON SITE)
-        if (url.includes('tiktok.com')) {
-            try {
-                // Using TikWM Public API (CORS Friendly)
-                const response = await fetch(`https://www.tikwm.com/api/?url=${url}&hd=1`);
-                const data = await response.json();
-
-                loader.style.display = 'none';
-
-                if(data.code === 0) {
-                    // Success! Show Video Player
-                    resultBox.style.display = 'block';
-                    
-                    let vidUrl = data.data.play;
-                    let musicUrl = data.data.music;
-                    
-                    // Update Player
-                    let player = document.getElementById('video-player');
-                    player.src = vidUrl;
-                    player.style.display = 'block';
-                    
-                    // Update Buttons
-                    document.getElementById('download-btn').href = vidUrl;
-                    document.getElementById('music-btn').href = musicUrl;
-                } else {
-                    alert("Video Fetch Failed. Private ho sakti hai.");
-                }
-            } catch (err) {
-                loader.style.display = 'none';
-                fallbackMethod(url);
-            }
-        } 
-        
-        // 2. YOUTUBE / INSTAGRAM (SECURITY BYPASS)
-        else {
-            loader.style.display = 'none';
-            // GitHub Pages par Insta/YT direct block hota hai due to CORS.
-            // Hum user ko error dikhane ke bajaye "Secure Window" mein le jayenge.
+        setTimeout(() => {
+            msg.style.display = 'none';
             
-            let confirmAction = confirm("Instagram/YouTube Security ki wajah se direct download block hai.\n\nKya hum Secure Server (SSYouTube/SnapInsta) open karein?");
-            
-            if(confirmAction) {
-                fallbackMethod(url);
+            // Logic to choose the best site based on link type
+            if(url.includes('instagram.com')) {
+                // Aapki Requested Site
+                window.open('https://snapinsta.to/en2', '_blank');
+            } 
+            else if(url.includes('youtube.com') || url.includes('youtu.be')) {
+                // YouTube ke liye best
+                window.open('https://ssyoutube.com/en/watch?v=' + getID(url), '_blank');
+            } 
+            else if(url.includes('tiktok.com')) {
+                // TikTok ke liye best
+                window.open('https://snaptik.app/', '_blank');
+            } 
+            else if(url.includes('facebook.com')) {
+                // Facebook ke liye best
+                window.open('https://fdown.net/', '_blank');
             }
+            else {
+                // Universal Fallback
+                window.open('https://savefrom.net/', '_blank');
+            }
+        }, 1500); // 1.5 second ka fake loading taake user ko lage process ho raha hai
+    }
+
+    function getID(url) {
+        var m = url.match(/^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/);
+        return (m && m[2].length == 11) ? m[2] : null;
+    }
+
+    // --- GAME LOGIC ---
+    let turn='X', board=['','','','','','','','',''];
+    function play(i) {
+        if(board[i]=='') {
+            board[i]=turn;
+            document.getElementsByClassName('cell')[i].innerText=turn;
+            turn = turn==='X'?'O':'X';
+            document.getElementById('gStatus').innerText=`Player ${turn}'s Turn`;
         }
     }
-
-    function fallbackMethod(url) {
-        if(url.includes('youtube') || url.includes('youtu.be')) {
-            window.open('https://ssyoutube.com/en/watch?v=' + extractId(url), '_blank');
-        } else if(url.includes('instagram')) {
-            window.open('https://snapinsta.app/', '_blank');
-        } else if(url.includes('facebook')) {
-             window.open('https://fdown.net/', '_blank');
-        } else {
-            window.open('https://savefrom.net/', '_blank');
-        }
+    function resetG() {
+        board=['','','','','','','','','']; turn='X';
+        document.getElementById('gStatus').innerText=`Player X's Turn`;
+        Array.from(document.getElementsByClassName('cell')).forEach(c=>c.innerText='');
     }
 
-    function extractId(url) {
-        var match = url.match(/^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/);
-        return (match && match[2].length == 11) ? match[2] : null;
+    // --- QUIZ LOGIC ---
+    const qs = [
+        {q:"Pakistan ka capital?", o:["Karachi","Islamabad","Lahore"], a:1},
+        {q:"Apple ka rang?", o:["Red","Blue","Black"], a:0}
+    ];
+    let qI=0;
+    function loadQ() {
+        if(qI>=qs.length) { document.getElementById('qText').innerText="Quiz Done!"; return;}
+        let c=qs[qI];
+        document.getElementById('qText').innerText=c.q;
+        let h="";
+        c.o.forEach((Op,i)=> h+=`<button class="btn btn-outline-dark" onclick="alert('${i==c.a?'Correct!':'Wrong!'}'); qI++; loadQ()">${Op}</button>`);
+        document.getElementById('qOpts').innerHTML=h;
     }
+    loadQ();
 </script>
 
 </body>
-    </html>
+</html>
