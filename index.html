@@ -3,255 +3,259 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduTools - Student & Downloader Hub</title>
-    <!-- Bootstrap CSS -->
+    <title>Pak Edu & Tools Hub</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <style>
-        body { background-color: #f0f2f5; font-family: 'Poppins', sans-serif; }
+        body { background-color: #f4f6f9; font-family: 'Segoe UI', sans-serif; }
         
-        /* Navbar */
-        .navbar { background: linear-gradient(135deg, #0061ff 0%, #60efff 100%); }
-        .navbar-brand, .nav-link { color: white !important; font-weight: bold; }
+        /* Gradient Navbar */
+        .navbar { background: linear-gradient(45deg, #004e92, #000428); }
+        .navbar-brand { color: #fff !important; font-weight: bold; letter-spacing: 1px; }
 
         /* Hero Section */
         .hero {
-            background: white;
-            padding: 40px 20px;
-            text-align: center;
-            border-radius: 0 0 30px 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
+            background: white; padding: 40px 20px; text-align: center;
+            border-bottom-right-radius: 50px; border-bottom-left-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 30px;
         }
 
-        /* Card Styles */
-        .option-card {
-            border: none;
-            border-radius: 20px;
-            background: white;
-            padding: 30px;
-            text-align: center;
-            transition: 0.3s;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            height: 100%;
+        /* Card Design */
+        .feature-card {
+            border: none; border-radius: 20px; padding: 25px;
+            background: white; text-align: center; transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05); cursor: pointer;
         }
-        .option-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
-        .icon-big { font-size: 60px; margin-bottom: 20px; }
+        .feature-card:hover { transform: translateY(-10px); background: #fdfdfd; }
+        .icon-box { font-size: 50px; margin-bottom: 15px; }
 
         /* Sections */
-        .section-container { display: none; animation: fadeIn 0.5s; }
-        .active-section { display: block; }
+        .section-view { display: none; animation: fadeIn 0.4s ease-in-out; }
+        .active-view { display: block; }
+        @keyframes fadeIn { from {opacity:0; transform: translateY(20px);} to {opacity:1; transform: translateY(0);} }
+
+        /* Student List Styling */
+        .list-group-item {
+            border: none; margin-bottom: 10px; border-radius: 10px !important;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05); transition: 0.2s;
+        }
+        .list-group-item:hover { background-color: #f1faff; }
         
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
-        /* Student Tabs */
-        .nav-tabs .nav-link { color: #333; font-weight: 600; }
-        .nav-tabs .nav-link.active { color: #0061ff; border-bottom: 3px solid #0061ff; }
-
         /* Downloader Input */
-        .dl-input { border-radius: 50px 0 0 50px; padding: 15px 25px; border: 2px solid #ddd; }
-        .dl-btn { border-radius: 0 50px 50px 0; padding: 15px 30px; font-weight: bold; }
+        .dl-box { max-width: 600px; margin: auto; }
+        .form-control-lg { border-radius: 50px 0 0 50px; border: 2px solid #ddd; }
+        .btn-lg { border-radius: 0 50px 50px 0; }
     </style>
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg shadow-sm">
+<!-- Header -->
+<nav class="navbar navbar-dark shadow-sm sticky-top">
     <div class="container">
-        <a class="navbar-brand" href="#" onclick="goHome()"><i class="fas fa-graduation-cap"></i> EduTools</a>
-        <button class="btn btn-light btn-sm rounded-pill text-primary fw-bold" onclick="goHome()">Home</button>
+        <a class="navbar-brand" href="#" onclick="showHome()"><i class="fas fa-book-reader"></i> StudentHub</a>
+        <button class="btn btn-outline-light btn-sm rounded-pill" onclick="showHome()">Main Menu</button>
     </div>
 </nav>
 
-<!-- 1. HOME SCREEN -->
-<div id="home-section" class="section-container active-section">
+<!-- 1. MAIN HOME -->
+<div id="home-view" class="section-view active-view">
     <div class="hero">
-        <h1 class="fw-bold text-primary">Welcome Students & Public</h1>
-        <p class="text-muted">Notes download karein ya Social Media Videos save karein.</p>
+        <h1 class="fw-bold text-dark">Free Notes & Tools</h1>
+        <p class="text-muted">Pakistan's Best Student Library & Video Downloader</p>
     </div>
 
     <div class="container">
         <div class="row g-4">
-            <!-- Student Box -->
             <div class="col-md-6">
-                <div class="option-card" onclick="showSection('student-section')">
-                    <div class="icon-big text-primary"><i class="fas fa-book-reader"></i></div>
-                    <h3>Student Zone</h3>
-                    <p class="text-muted">Class 9, 10, 11, 12 ke Notes aur Papers.</p>
-                    <button class="btn btn-primary rounded-pill w-100 mt-2">Notes Dekhein</button>
+                <div class="feature-card" onclick="showSection('student-view')">
+                    <div class="icon-box text-primary"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Student Notes</h3>
+                    <p>9th, 10th, 1st Year, 2nd Year Notes & Past Papers.</p>
+                    <button class="btn btn-primary rounded-pill w-100">Open Library</button>
                 </div>
             </div>
-            
-            <!-- Downloader Box -->
             <div class="col-md-6">
-                <div class="option-card" onclick="showSection('downloader-section')">
-                    <div class="icon-big text-danger"><i class="fab fa-youtube"></i></div>
+                <div class="feature-card" onclick="showSection('downloader-view')">
+                    <div class="icon-box text-danger"><i class="fas fa-play-circle"></i></div>
                     <h3>Video Downloader</h3>
-                    <p class="text-muted">TikTok, YouTube, Insta videos download.</p>
-                    <button class="btn btn-danger rounded-pill w-100 mt-2">Download Karein</button>
+                    <p>Save Videos from TikTok, YouTube, FB & Instagram.</p>
+                    <button class="btn btn-danger rounded-pill w-100">Go to Downloader</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<!-- 2. STUDENT ZONE (Tabs System) -->
-<div id="student-section" class="section-container container mt-4">
-    <button class="btn btn-secondary mb-4 rounded-pill" onclick="goHome()"><i class="fas fa-arrow-left"></i> Wapis Home</button>
+<!-- 2. STUDENT LIBRARY -->
+<div id="student-view" class="section-view container mt-4">
+    <button class="btn btn-secondary mb-3 rounded-pill" onclick="showHome()"><i class="fas fa-arrow-left"></i> Back</button>
     
-    <div class="card shadow p-4 border-0 rounded-4">
-        <h2 class="text-primary mb-4"><i class="fas fa-folder-open"></i> Student Notes Library</h2>
+    <div class="card p-4 border-0 shadow-sm rounded-4">
+        <h3 class="text-primary fw-bold mb-3"><i class="fas fa-folder"></i> Select Class</h3>
+        
+        <!-- Search Bar -->
+        <input type="text" id="searchInput" class="form-control mb-4 rounded-pill" placeholder="🔍 Search Subject (e.g. Math, Urdu)..." onkeyup="filterSubjects()">
 
         <!-- Class Tabs -->
-        <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
-            <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#class9">9th Class</button></li>
-            <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#class10">10th Class</button></li>
-            <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#class11">1st Year</button></li>
-            <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#class12">2nd Year</button></li>
+        <ul class="nav nav-pills mb-3 nav-fill" id="pills-tab" role="tablist">
+            <li class="nav-item"><button class="nav-link active rounded-pill" data-bs-toggle="pill" data-bs-target="#c9">9th</button></li>
+            <li class="nav-item"><button class="nav-link rounded-pill" data-bs-toggle="pill" data-bs-target="#c10">10th</button></li>
+            <li class="nav-item"><button class="nav-link rounded-pill" data-bs-toggle="pill" data-bs-target="#c11">11th</button></li>
+            <li class="nav-item"><button class="nav-link rounded-pill" data-bs-toggle="pill" data-bs-target="#c12">12th</button></li>
         </ul>
 
-        <div class="tab-content" id="myTabContent">
+        <div class="tab-content" id="pills-tabContent">
             
-            <!-- 9th Class Data -->
-            <div class="tab-pane fade show active" id="class9">
-                <div class="list-group">
-                    <!-- EDIT HERE: Apne Google Drive links 'href' mein dalein -->
-                    <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                        <div><i class="fas fa-file-pdf text-danger"></i> Physics Chapter 1 Notes</div>
-                        <span class="badge bg-success rounded-pill">Download</span>
+            <!-- 9th Class -->
+            <div class="tab-pane fade show active" id="c9">
+                <div class="list-group subject-list">
+                    <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                        <div><i class="fas fa-file-pdf text-danger"></i> <b>Physics</b> - Full Book Notes</div>
+                        <span class="badge bg-primary">Download</span>
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                        <div><i class="fas fa-file-pdf text-danger"></i> Chemistry Full Book MCQs</div>
-                        <span class="badge bg-success rounded-pill">Download</span>
+                    <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                        <div><i class="fas fa-flask text-success"></i> <b>Chemistry</b> - Important MCQs</div>
+                        <span class="badge bg-primary">Download</span>
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                        <div><i class="fas fa-file-alt text-primary"></i> English Past Papers 2023</div>
-                        <span class="badge bg-success rounded-pill">Download</span>
+                    <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                        <div><i class="fas fa-calculator text-warning"></i> <b>Mathematics</b> - Solved Exercises</div>
+                        <span class="badge bg-primary">Download</span>
                     </a>
-                </div>
-            </div>
-
-            <!-- 10th Class Data -->
-            <div class="tab-pane fade" id="class10">
-                <div class="alert alert-info">10th Class ke notes jald upload honge!</div>
-            </div>
-
-            <!-- 1st Year Data -->
-            <div class="tab-pane fade" id="class11">
-                <div class="list-group">
-                     <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                        <div><i class="fas fa-file-pdf text-danger"></i> Math Formulas Sheet</div>
-                        <span class="badge bg-success rounded-pill">Download</span>
+                    <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                        <div><i class="fas fa-book text-info"></i> <b>Urdu</b> - Khulasa & Grammar</div>
+                        <span class="badge bg-primary">Download</span>
                     </a>
                 </div>
             </div>
 
-            <!-- 2nd Year Data -->
-            <div class="tab-pane fade" id="class12">
-                <div class="alert alert-warning">Admin working on uploads...</div>
+            <!-- 10th Class -->
+            <div class="tab-pane fade" id="c10">
+                <div class="list-group subject-list">
+                    <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                        <div><i class="fas fa-laptop text-dark"></i> <b>Computer</b> - Chapter 1-5</div>
+                        <span class="badge bg-primary">Download</span>
+                    </a>
+                    <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                        <div><i class="fas fa-leaf text-success"></i> <b>Biology</b> - Short Questions</div>
+                        <span class="badge bg-primary">Download</span>
+                    </a>
+                    <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                        <div><i class="fas fa-globe-asia text-secondary"></i> <b>Pak Studies</b> - English Medium</div>
+                        <span class="badge bg-primary">Download</span>
+                    </a>
+                </div>
             </div>
-        </div>
-    </div>
-</div>
 
-<!-- 3. DOWNLOADER ZONE (Smart Link System) -->
-<div id="downloader-section" class="section-container container mt-4">
-    <button class="btn btn-secondary mb-4 rounded-pill" onclick="goHome()"><i class="fas fa-arrow-left"></i> Wapis Home</button>
-
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card shadow-lg p-5 border-0 rounded-4 text-center">
-                <div class="mb-3">
-                    <i class="fab fa-tiktok text-dark fa-2x mx-2"></i>
-                    <i class="fab fa-youtube text-danger fa-2x mx-2"></i>
-                    <i class="fab fa-instagram text-warning fa-2x mx-2"></i>
+            <!-- 11th Class -->
+            <div class="tab-pane fade" id="c11">
+                <div class="list-group subject-list">
+                    <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                        <div><i class="fas fa-language text-danger"></i> <b>English</b> - Applications & Stories</div>
+                        <span class="badge bg-primary">Download</span>
+                    </a>
+                     <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                        <div><i class="fas fa-moon text-success"></i> <b>Islamiyat</b> - Hadees Notes</div>
+                        <span class="badge bg-primary">Download</span>
+                    </a>
                 </div>
-                
-                <h2 class="fw-bold mb-3">All-in-One Downloader</h2>
-                <p class="text-muted mb-4">Link paste karein aur system khud best download link open karega.</p>
+            </div>
 
-                <div class="input-group mb-3">
-                    <input type="text" id="videoUrl" class="form-control dl-input" placeholder="Paste TikTok/YouTube Link here...">
-                    <button class="btn btn-danger dl-btn" onclick="processDownload()"><i class="fas fa-download"></i> Go</button>
-                </div>
-
-                <div id="dl-status" class="mt-3 text-success fw-bold" style="display:none;">
-                    <i class="fas fa-spinner fa-spin"></i> Processing... Please wait.
-                </div>
-                
-                <div class="alert alert-light mt-3 small text-muted">
-                    Supports: YouTube, TikTok (No Watermark), Instagram Reels.
+            <!-- 12th Class -->
+            <div class="tab-pane fade" id="c12">
+                <div class="list-group subject-list">
+                    <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                        <div><i class="fas fa-atom text-primary"></i> <b>Physics 2nd Year</b> - Numericals</div>
+                        <span class="badge bg-primary">Download</span>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Footer -->
-<div class="text-center mt-5 mb-3 text-muted">
-    <small>&copy; 2025 EduTools Hub</small>
+<!-- 3. DOWNLOADER TOOL -->
+<div id="downloader-view" class="section-view container mt-4">
+    <button class="btn btn-secondary mb-3 rounded-pill" onclick="showHome()"><i class="fas fa-arrow-left"></i> Back</button>
+
+    <div class="card shadow-lg border-0 rounded-4 text-center p-5 dl-box">
+        <h2 class="fw-bold mb-3">🚀 Universal Downloader</h2>
+        <p class="text-muted">Paste any link from YouTube, TikTok, or Instagram.</p>
+
+        <div class="input-group mb-3 mt-4">
+            <input type="text" id="dlUrl" class="form-control form-control-lg" placeholder="Paste Link Here...">
+            <button class="btn btn-danger btn-lg" onclick="startDownload()">Download</button>
+        </div>
+        
+        <div id="loadingMsg" class="mt-3 text-success fw-bold" style="display:none;">
+            <i class="fas fa-spinner fa-spin"></i> Processing... Redirecting to server...
+        </div>
+
+        <div class="d-flex justify-content-center mt-4 gap-3">
+            <i class="fab fa-youtube fa-2x text-danger"></i>
+            <i class="fab fa-tiktok fa-2x text-dark"></i>
+            <i class="fab fa-instagram fa-2x text-warning"></i>
+            <i class="fab fa-facebook fa-2x text-primary"></i>
+        </div>
+    </div>
 </div>
 
-<!-- Scripts -->
+<footer class="text-center mt-5 mb-4 text-muted">
+    <p>Made for Students ❤️ 2025</p>
+</footer>
+
+<!-- JavaScript Logic -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    // Navigation Logic
+    // Page Switching
     function showSection(id) {
-        document.querySelectorAll('.section-container').forEach(sec => sec.classList.remove('active-section'));
-        document.getElementById(id).classList.add('active-section');
+        document.querySelectorAll('.section-view').forEach(el => el.classList.remove('active-view'));
+        document.getElementById(id).classList.add('active-view');
+    }
+    function showHome() { showSection('home-view'); }
+
+    // Search Functionality
+    function filterSubjects() {
+        let input = document.getElementById('searchInput').value.toLowerCase();
+        let items = document.getElementsByClassName('subject-list');
+        
+        // Loop through all lists in all tabs
+        for (let list of items) {
+            let links = list.getElementsByTagName('a');
+            for (let link of links) {
+                let text = link.textContent || link.innerText;
+                link.style.display = text.toLowerCase().indexOf(input) > -1 ? "" : "none";
+            }
+        }
+    }
+
+    // Downloader Redirect Logic
+    function startDownload() {
+        let url = document.getElementById('dlUrl').value;
+        let msg = document.getElementById('loadingMsg');
+        
+        if(!url) { alert("Please paste a link first!"); return; }
+
+        msg.style.display = 'block';
+        
+        setTimeout(() => {
+            msg.style.display = 'none';
+            if(url.includes('youtube') || url.includes('youtu.be')) {
+                window.open('https://ssyoutube.com/en/watch?v=' + extractId(url), '_blank');
+            } else if(url.includes('tiktok')) {
+                window.open('https://snaptik.app/', '_blank');
+            } else if(url.includes('instagram')) {
+                window.open('https://snapinsta.app/', '_blank');
+            } else {
+                window.open('https://savefrom.net/', '_blank');
+            }
+        }, 1000);
     }
     
-    function goHome() {
-        showSection('home-section');
-    }
-
-    // Downloader Logic (Smart Redirect)
-    function processDownload() {
-        const url = document.getElementById('videoUrl').value.trim();
-        const status = document.getElementById('dl-status');
-
-        if (!url) {
-            alert("Please pehle link paste karein!");
-            return;
-        }
-
-        status.style.display = "block";
-        status.innerHTML = '<i class="fas fa-cog fa-spin"></i> Detecting Video Type...';
-
-        setTimeout(() => {
-            if (url.includes('youtube.com') || url.includes('youtu.be')) {
-                // Redirect to SSYouTube helper
-                window.open('https://ssyoutube.com/en/watch?v=' + extractVideoID(url), '_blank');
-                status.innerHTML = "Opening YouTube Downloader...";
-            } 
-            else if (url.includes('tiktok.com')) {
-                // Redirect to SnapTik helper
-                window.open('https://snaptik.app/', '_blank');
-                // Note: Direct ID injection is hard for TikTok without API, so we open the tool
-                status.innerHTML = "Opening TikTok Downloader...";
-            }
-            else if (url.includes('instagram.com')) {
-                // Redirect to SnapInsta
-                window.open('https://snapinsta.app/', '_blank');
-                status.innerHTML = "Opening Instagram Downloader...";
-            }
-            else {
-                alert("Link not supported or invalid!");
-                status.style.display = "none";
-            }
-        }, 1500);
-    }
-
-    // Helper to get YouTube ID
-    function extractVideoID(url) {
-        var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
-        var match = url.match(regExp);
+    function extractId(url) {
+        var match = url.match(/^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/);
         return (match && match[2].length == 11) ? match[2] : null;
     }
 </script>
 
 </body>
-          </html>
+    </html>
