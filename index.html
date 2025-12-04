@@ -9,15 +9,21 @@
     <style>
         body { background-color: #f4f6f9; font-family: 'Segoe UI', sans-serif; }
         
-        /* Gradient Navbar */
+        /* Navbar */
         .navbar { background: linear-gradient(45deg, #004e92, #000428); }
         .navbar-brand { color: #fff !important; font-weight: bold; letter-spacing: 1px; }
 
-        /* Hero Section */
+        /* Hero */
         .hero {
-            background: white; padding: 40px 20px; text-align: center;
-            border-bottom-right-radius: 50px; border-bottom-left-radius: 50px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 30px;
+            background: white; padding: 30px 20px; text-align: center;
+            border-bottom-right-radius: 40px; border-bottom-left-radius: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 20px;
+        }
+
+        /* Ad Container */
+        .ad-container {
+            text-align: center; margin: 20px auto; padding: 10px;
+            background: #fffdf0; border: 1px dashed #ccc; max-width: 350px;
         }
 
         /* Card Design */
@@ -34,14 +40,14 @@
         .active-view { display: block; }
         @keyframes fadeIn { from {opacity:0; transform: translateY(20px);} to {opacity:1; transform: translateY(0);} }
 
-        /* Student List Styling */
+        /* List Styling */
         .list-group-item {
             border: none; margin-bottom: 10px; border-radius: 10px !important;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05); transition: 0.2s;
         }
         .list-group-item:hover { background-color: #f1faff; }
         
-        /* Downloader Input */
+        /* Downloader */
         .dl-box { max-width: 600px; margin: auto; }
         .form-control-lg { border-radius: 50px 0 0 50px; border: 2px solid #ddd; }
         .btn-lg { border-radius: 0 50px 50px 0; }
@@ -62,6 +68,12 @@
     <div class="hero">
         <h1 class="fw-bold text-dark">Free Notes & Tools</h1>
         <p class="text-muted">Pakistan's Best Student Library & Video Downloader</p>
+    </div>
+
+    <!-- 💰 AD PLACEMENT 1 (Home Page) -->
+    <div class="ad-container">
+        <small class="text-muted">Advertisement</small><br>
+        <script type="text/javascript" src="//pl28185755.effectivegatecpm.com/09/a8/5f/09a85fb4fd4acbfb73562548f399f7b7.js"></script>
     </div>
 
     <div class="container">
@@ -94,7 +106,12 @@
         <h3 class="text-primary fw-bold mb-3"><i class="fas fa-folder"></i> Select Class</h3>
         
         <!-- Search Bar -->
-        <input type="text" id="searchInput" class="form-control mb-4 rounded-pill" placeholder="🔍 Search Subject (e.g. Math, Urdu)..." onkeyup="filterSubjects()">
+        <input type="text" id="searchInput" class="form-control mb-3 rounded-pill" placeholder="🔍 Search Subject (e.g. Math, Urdu)..." onkeyup="filterSubjects()">
+
+        <!-- 💰 AD PLACEMENT 2 (Student Section) -->
+        <div class="ad-container">
+            <script type="text/javascript" src="//pl28185755.effectivegatecpm.com/09/a8/5f/09a85fb4fd4acbfb73562548f399f7b7.js"></script>
+        </div>
 
         <!-- Class Tabs -->
         <ul class="nav nav-pills mb-3 nav-fill" id="pills-tab" role="tablist">
@@ -121,10 +138,6 @@
                         <div><i class="fas fa-calculator text-warning"></i> <b>Mathematics</b> - Solved Exercises</div>
                         <span class="badge bg-primary">Download</span>
                     </a>
-                    <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
-                        <div><i class="fas fa-book text-info"></i> <b>Urdu</b> - Khulasa & Grammar</div>
-                        <span class="badge bg-primary">Download</span>
-                    </a>
                 </div>
             </div>
 
@@ -139,10 +152,6 @@
                         <div><i class="fas fa-leaf text-success"></i> <b>Biology</b> - Short Questions</div>
                         <span class="badge bg-primary">Download</span>
                     </a>
-                    <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
-                        <div><i class="fas fa-globe-asia text-secondary"></i> <b>Pak Studies</b> - English Medium</div>
-                        <span class="badge bg-primary">Download</span>
-                    </a>
                 </div>
             </div>
 
@@ -151,10 +160,6 @@
                 <div class="list-group subject-list">
                     <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
                         <div><i class="fas fa-language text-danger"></i> <b>English</b> - Applications & Stories</div>
-                        <span class="badge bg-primary">Download</span>
-                    </a>
-                     <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
-                        <div><i class="fas fa-moon text-success"></i> <b>Islamiyat</b> - Hadees Notes</div>
                         <span class="badge bg-primary">Download</span>
                     </a>
                 </div>
@@ -190,6 +195,11 @@
             <i class="fas fa-spinner fa-spin"></i> Processing... Redirecting to server...
         </div>
 
+        <!-- 💰 AD PLACEMENT 3 (Downloader Section) -->
+        <div class="ad-container">
+            <script type="text/javascript" src="//pl28185755.effectivegatecpm.com/09/a8/5f/09a85fb4fd4acbfb73562548f399f7b7.js"></script>
+        </div>
+
         <div class="d-flex justify-content-center mt-4 gap-3">
             <i class="fab fa-youtube fa-2x text-danger"></i>
             <i class="fab fa-tiktok fa-2x text-dark"></i>
@@ -217,8 +227,6 @@
     function filterSubjects() {
         let input = document.getElementById('searchInput').value.toLowerCase();
         let items = document.getElementsByClassName('subject-list');
-        
-        // Loop through all lists in all tabs
         for (let list of items) {
             let links = list.getElementsByTagName('a');
             for (let link of links) {
