@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moazzam Hub - Play & Learn</title>
+    <title>Moazzam Hub - Play & Win</title>
 
-    <!-- ✅ GOOGLE VERIFICATION CODE -->
+    <!-- ✅ GOOGLE VERIFICATION CODE (Aapka Original) -->
     <meta name="google-site-verification" content="grZR5ds5hHxrscm-MrGjFzVv9S1w4NlyUVL0qhQFU7w" />
     
     <!-- SEO Meta Tags -->
@@ -20,18 +20,11 @@
         .navbar { background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); }
         .navbar-brand { font-weight: bold; color: white !important; }
 
-        /* Ad Box */
+        /* Ad Placeholder Box (Banner k liye jagah) */
         .ad-box {
             text-align: center; margin: 15px auto; 
             max-width: 350px; overflow: hidden; background: #fff;
-            border: 1px dashed #ccc; padding: 5px;
-        }
-
-        /* Sticky Footer Ad */
-        .sticky-ad {
-            position: fixed; left: 0; bottom: 0; width: 100%;
-            background: white; text-align: center; z-index: 9999;
-            box-shadow: 0 -5px 15px rgba(0,0,0,0.1); padding: 5px 0; border-top: 1px solid #ddd;
+            border: 1px dashed #ccc; padding: 10px; color: #999; font-size: 12px;
         }
 
         /* Cards */
@@ -81,18 +74,16 @@
     </div>
 </nav>
 
-<!-- 💰 TOP AD -->
-<div class="ad-box">
-    <small class="text-muted" style="font-size:10px;">Sponsored</small><br>
-    <script type="text/javascript" src="//pl28185755.effectivegatecpm.com/09/a8/5f/09a85fb4fd4acbfb73562548f399f7b7.js"></script>
-</div>
-
 <!-- 1. HOME DASHBOARD -->
 <div id="home-view" class="section-view active-view">
     <div class="container my-4">
+        
+        <!-- Ad Placeholder -->
+        <div class="ad-box">Advertisement Space</div>
+
         <h3 class="text-center fw-bold mb-4">Choose Activity</h3>
         <div class="row g-3">
-            <!-- SNAKE GAME (NEW) -->
+            <!-- SNAKE GAME -->
             <div class="col-12">
                 <div class="feature-card bg-dark text-white" onclick="showSection('snake-view'); initSnake();">
                     <div class="text-success fs-1"><i class="fas fa-snake"></i></div>
@@ -113,9 +104,6 @@
                     <h6 class="mt-2 fw-bold">Spin & Win</h6>
                 </div>
             </div>
-
-            <!-- 💰 MIDDLE AD -->
-            <div class="col-12"><div class="ad-box"><script type="text/javascript" src="//pl28185755.effectivegatecpm.com/09/a8/5f/09a85fb4fd4acbfb73562548f399f7b7.js"></script></div></div>
 
             <div class="col-6">
                 <div class="feature-card" onclick="showSection('downloader-view')">
@@ -138,12 +126,10 @@
     <button class="btn btn-secondary btn-sm rounded-pill mb-3" onclick="showHome()">← Exit Game</button>
     <div class="card p-3 border-0 shadow rounded-4 bg-light">
         <h4 class="fw-bold text-success">Snake Game</h4>
-        <p class="small text-muted">Score: <span id="snakeScore">0</span> | High Score: <span id="snakeHigh">0</span></p>
+        <p class="small text-muted">Score: <span id="snakeScore">0</span></p>
         
-        <!-- Game Canvas -->
         <canvas id="snake-canvas" width="300" height="300"></canvas>
         
-        <!-- Mobile Controls -->
         <div class="snake-controls">
             <button class="btn btn-dark ctrl-btn" onclick="changeDirection('LEFT')">←</button>
             <div class="d-flex flex-column gap-2">
@@ -152,9 +138,6 @@
             </div>
             <button class="btn btn-dark ctrl-btn" onclick="changeDirection('RIGHT')">→</button>
         </div>
-
-        <!-- 💰 AD SPOT (Inside Game) -->
-        <div class="ad-box mt-3"><script type="text/javascript" src="//pl28185755.effectivegatecpm.com/09/a8/5f/09a85fb4fd4acbfb73562548f399f7b7.js"></script></div>
     </div>
 </div>
 
@@ -164,7 +147,6 @@
     <div class="card p-4 border-0 shadow rounded-4">
         <h4 class="fw-bold text-warning">Tic Tac Toe</h4>
         <div id="ttt-status" class="mb-2 fw-bold text-primary">Player X's Turn</div>
-        
         <div class="ttt-board">
             <div class="ttt-cell" onclick="tttMove(0)" id="c0"></div>
             <div class="ttt-cell" onclick="tttMove(1)" id="c1"></div>
@@ -176,9 +158,7 @@
             <div class="ttt-cell" onclick="tttMove(7)" id="c7"></div>
             <div class="ttt-cell" onclick="tttMove(8)" id="c8"></div>
         </div>
-
         <button class="btn btn-outline-danger btn-sm mt-3" onclick="resetTTT()">Restart Game</button>
-        <div class="ad-box mt-3"><script type="text/javascript" src="//pl28185755.effectivegatecpm.com/09/a8/5f/09a85fb4fd4acbfb73562548f399f7b7.js"></script></div>
     </div>
 </div>
 
@@ -192,7 +172,6 @@
             <div class="btn btn-dark position-absolute top-50 start-50 translate-middle rounded-circle p-3 fw-bold" onclick="spinWheel()" style="z-index:5;">SPIN</div>
         </div>
         <h4 id="spin-result" class="mt-3 fw-bold text-primary">Points: 0</h4>
-        <div class="ad-box mt-3"><script type="text/javascript" src="//pl28185755.effectivegatecpm.com/09/a8/5f/09a85fb4fd4acbfb73562548f399f7b7.js"></script></div>
     </div>
 </div>
 
@@ -201,8 +180,6 @@
     <button class="btn btn-secondary btn-sm rounded-pill mb-3" onclick="showHome()">← Back</button>
     <div class="card p-4 border-0 shadow rounded-4 text-center">
         <h3 class="fw-bold mb-3">Video Downloader</h3>
-        <p class="small text-muted">Auto-Redirect to Best Server</p>
-        <div class="ad-box mb-3"><script type="text/javascript" src="//pl28185755.effectivegatecpm.com/09/a8/5f/09a85fb4fd4acbfb73562548f399f7b7.js"></script></div>
         <input type="text" id="dlUrl" class="form-control mb-3" placeholder="Paste Link Here...">
         <button class="btn btn-danger w-100 rounded-pill fw-bold py-2 shadow" onclick="startDownload()">Start Download</button>
         <div id="loadingMsg" class="mt-3 text-success fw-bold" style="display:none;"><i class="fas fa-spinner fa-spin"></i> Processing...</div>
@@ -214,7 +191,6 @@
     <button class="btn btn-secondary btn-sm rounded-pill mb-3" onclick="showHome()">← Back</button>
     <div class="card p-4 border-0 shadow rounded-4">
         <h4 class="text-primary fw-bold mb-3">🔗 Official Notes Links</h4>
-        <div class="ad-box mb-3"><script type="text/javascript" src="//pl28185755.effectivegatecpm.com/09/a8/5f/09a85fb4fd4acbfb73562548f399f7b7.js"></script></div>
         <div class="list-group">
             <a href="https://www.ilmkidunya.com/" target="_blank" class="list-group-item d-flex justify-content-between align-items-center">
                 <span>9th/10th Notes</span> <span class="badge bg-success">Visit Site <i class="fas fa-external-link-alt"></i></span>
@@ -226,80 +202,57 @@
     </div>
 </div>
 
-<!-- 💰 STICKY FOOTER AD -->
-<div class="sticky-ad">
-    <script type="text/javascript" src="//pl28185755.effectivegatecpm.com/09/a8/5f/09a85fb4fd4acbfb73562548f399f7b7.js"></script>
-</div>
+<!-- ✅✅ SOCIAL BAR AD CODE (ADDED HERE) ✅✅ -->
+<script type="text/javascript" src="//pl28185755.effectivegatecpm.com/09/a8/5f/09a85fb4fd4acbfb73562548f399f7b7.js"></script>
+
 
 <!-- LOGIC -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    // Navigation
     function showSection(id) {
         document.querySelectorAll('.section-view').forEach(el => el.classList.remove('active-view'));
         document.getElementById(id).classList.add('active-view');
-        // Stop snake loop if leaving game
         if(id !== 'snake-view') clearInterval(gameInterval);
     }
     function showHome() { showSection('home-view'); }
 
-    // --- 🐍 SNAKE GAME LOGIC (ROBUST) ---
+    // Snake Logic
     let canvas, ctx, gameInterval;
     let snake = [{x: 10, y: 10}];
     let food = {x: 15, y: 15};
     let dx = 0, dy = 0;
     let score = 0;
     const gridSize = 20;
-    let tileCount = 15; // 300px / 20 = 15
+    let tileCount = 15;
 
     function initSnake() {
         canvas = document.getElementById('snake-canvas');
         ctx = canvas.getContext('2d');
         resetSnake();
-        gameInterval = setInterval(gameLoop, 150); // Speed
+        gameInterval = setInterval(gameLoop, 150);
     }
 
     function gameLoop() {
-        snake[0].x += dx;
-        snake[0].y += dy;
-
-        // Wall Collision (Wrap around)
+        snake[0].x += dx; snake[0].y += dy;
         if(snake[0].x < 0) snake[0].x = tileCount -1;
         if(snake[0].x >= tileCount) snake[0].x = 0;
         if(snake[0].y < 0) snake[0].y = tileCount -1;
         if(snake[0].y >= tileCount) snake[0].y = 0;
 
-        // Draw Background
-        ctx.fillStyle = '#2c3e50';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-        // Draw Food
-        ctx.fillStyle = '#e74c3c';
-        ctx.fillRect(food.x * gridSize, food.y * gridSize, gridSize - 2, gridSize - 2);
-
-        // Draw Snake
+        ctx.fillStyle = '#2c3e50'; ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = '#e74c3c'; ctx.fillRect(food.x * gridSize, food.y * gridSize, gridSize - 2, gridSize - 2);
         ctx.fillStyle = '#2ecc71';
         for(let i=0; i<snake.length; i++) {
             ctx.fillRect(snake[i].x * gridSize, snake[i].y * gridSize, gridSize - 2, gridSize - 2);
-            // Self Collision
-            if(i > 0 && snake[i].x == snake[0].x && snake[i].y == snake[0].y) {
-                resetSnake();
-            }
+            if(i > 0 && snake[i].x == snake[0].x && snake[i].y == snake[0].y) resetSnake();
         }
 
-        // Eat Food
         if(snake[0].x == food.x && snake[0].y == food.y) {
-            score++;
-            document.getElementById('snakeScore').innerText = score;
-            snake.push({x: snake[snake.length-1].x, y: snake[snake.length-1].y}); // Grow
-            placeFood();
+            score++; document.getElementById('snakeScore').innerText = score;
+            snake.push({x: snake[snake.length-1].x, y: snake[snake.length-1].y});
+            food.x = Math.floor(Math.random() * tileCount); food.y = Math.floor(Math.random() * tileCount);
         }
-
-        // Move Body
-        for(let i=snake.length-1; i>0; i--) {
-            snake[i].x = snake[i-1].x;
-            snake[i].y = snake[i-1].y;
-        }
+        for(let i=snake.length-1; i>0; i--) { snake[i].x = snake[i-1].x; snake[i].y = snake[i-1].y; }
     }
 
     function changeDirection(dir) {
@@ -308,73 +261,41 @@
         if(dir === 'LEFT' && dx !== 1) { dx=-1; dy=0; }
         if(dir === 'RIGHT' && dx !== -1) { dx=1; dy=0; }
     }
+    function resetSnake() { snake = [{x: 10, y: 10}]; dx = 0; dy = 0; score = 0; document.getElementById('snakeScore').innerText = '0'; }
 
-    function placeFood() {
-        food.x = Math.floor(Math.random() * tileCount);
-        food.y = Math.floor(Math.random() * tileCount);
-    }
-
-    function resetSnake() {
-        snake = [{x: 10, y: 10}];
-        dx = 0; dy = 0;
-        score = 0;
-        document.getElementById('snakeScore').innerText = '0';
-        placeFood();
-    }
-
-    // --- ❌ TIC TAC TOE LOGIC (FIXED) ---
+    // Tic Tac Toe Logic
     let tttBoard = ['', '', '', '', '', '', '', '', ''];
-    let tttTurn = 'X';
-    let tttActive = true;
-    
+    let tttTurn = 'X'; let tttActive = true;
     function tttMove(index) {
         if(tttBoard[index] === '' && tttActive) {
             tttBoard[index] = tttTurn;
             let cell = document.getElementById('c' + index);
-            cell.innerText = tttTurn;
-            cell.classList.add(tttTurn.toLowerCase());
-            
-            checkTTTWin();
-            tttTurn = tttTurn === 'X' ? 'O' : 'X';
+            cell.innerText = tttTurn; cell.classList.add(tttTurn.toLowerCase());
+            checkTTTWin(); tttTurn = tttTurn === 'X' ? 'O' : 'X';
             if(tttActive) document.getElementById('ttt-status').innerText = `Player ${tttTurn}'s Turn`;
         }
     }
-
     function checkTTTWin() {
         const wins = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
         for(let condition of wins) {
             let [a,b,c] = condition;
             if(tttBoard[a] && tttBoard[a] === tttBoard[b] && tttBoard[a] === tttBoard[c]) {
-                document.getElementById('ttt-status').innerText = `🎉 Player ${tttBoard[a]} WINS!`;
-                tttActive = false;
-                return;
+                document.getElementById('ttt-status').innerText = `🎉 Player ${tttBoard[a]} WINS!`; tttActive = false; return;
             }
         }
-        if(!tttBoard.includes('')) {
-            document.getElementById('ttt-status').innerText = "It's a Draw!";
-            tttActive = false;
-        }
     }
-
     function resetTTT() {
-        tttBoard = ['', '', '', '', '', '', '', '', ''];
-        tttTurn = 'X';
-        tttActive = true;
+        tttBoard = ['', '', '', '', '', '', '', '', '']; tttTurn = 'X'; tttActive = true;
         document.getElementById('ttt-status').innerText = "Player X's Turn";
-        for(let i=0; i<9; i++) {
-            let cell = document.getElementById('c' + i);
-            cell.innerText = '';
-            cell.classList.remove('x', 'o');
-        }
+        for(let i=0; i<9; i++) { let cell = document.getElementById('c' + i); cell.innerText = ''; cell.classList.remove('x', 'o'); }
     }
 
-    // --- SPIN WHEEL ---
+    // Spin Wheel
     let deg = 0;
     function spinWheel() {
         let wheel = document.getElementById('wheel');
         let spin = Math.floor(Math.random() * 3000) + 1800; 
-        deg += spin;
-        wheel.style.transform = `rotate(${deg}deg)`;
+        deg += spin; wheel.style.transform = `rotate(${deg}deg)`;
         setTimeout(() => { 
             let p = Math.floor(Math.random() * 500) + 50; 
             document.getElementById('spin-result').innerText = `Points: ${p}`; 
@@ -382,7 +303,7 @@
         }, 4000);
     }
 
-    // --- DOWNLOADER ---
+    // Downloader
     function startDownload() {
         let url = document.getElementById('dlUrl').value.trim();
         let msg = document.getElementById('loadingMsg');
@@ -398,4 +319,4 @@
     }
 </script>
 </body>
-    </html>
+</html>
