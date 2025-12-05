@@ -3,37 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moazzam Hub - Result & Earning</title>
+    <title>Moazzam Hub - Pakistan Student Portal</title>
 
-    <!-- ✅ GOOGLE VERIFICATION -->
+    <!-- ✅ GOOGLE VERIFICATION CODE -->
     <meta name="google-site-verification" content="grZR5ds5hHxrscm-MrGjFzVv9S1w4NlyUVL0qhQFU7w" />
     
     <!-- Meta Tags -->
-    <meta name="description" content="Check 9th, 10th, 11th, 12th Results. Play Games, Download Video & Get Notes.">
+    <meta name="description" content="Check BISE Sahiwal, Lahore, Multan Results. Download Pakistani Notes & Videos.">
     
     <!-- Libraries -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        body { background-color: #f0f2f5; font-family: 'Poppins', sans-serif; padding-bottom: 90px; }
-        .navbar { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); }
-        .navbar-brand { font-weight: bold; color: white !important; }
+        body { background-color: #f8fff8; font-family: 'Poppins', sans-serif; padding-bottom: 90px; }
+        
+        /* 🇵🇰 PAKISTANI THEME NAVBAR */
+        .navbar { background: linear-gradient(135deg, #006400 0%, #11998e 100%); border-bottom: 4px solid #fff; }
+        .navbar-brand { font-weight: bold; color: white !important; letter-spacing: 1px; }
 
         /* Ad Placeholder Box */
         .ad-box {
             text-align: center; margin: 15px auto; 
-            max-width: 350px; overflow: hidden; background: #fff;
-            border: 1px dashed #ccc; padding: 10px; color: #999; font-size: 12px;
+            max-width: 320px; height: 100px; background: #fff;
+            border: 2px dashed #006400; padding: 10px; color: #999;
+            display: flex; align-items: center; justify-content: center;
         }
 
         /* Cards */
         .feature-card {
             border: none; border-radius: 15px; padding: 15px;
             background: white; text-align: center; transition: 0.3s;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05); cursor: pointer; height: 100%;
+            box-shadow: 0 4px 10px rgba(0,100,0,0.1); cursor: pointer; height: 100%;
         }
-        .feature-card:hover { transform: translateY(-5px); border: 1px solid #1e3c72; }
+        .feature-card:hover { transform: translateY(-5px); border: 1px solid #006400; background-color: #f0fff0; }
 
         /* Sections */
         .section-view { display: none; animation: fadeIn 0.3s; }
@@ -42,10 +45,10 @@
 
         /* Game Styles */
         .ttt-board { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; max-width: 250px; margin: 20px auto; }
-        .ttt-cell { width: 70px; height: 70px; background: #fff; border: 3px solid #333; font-size: 40px; font-weight: bold; display: flex; align-items: center; justify-content: center; cursor: pointer; border-radius: 10px; color: #333; }
-        #snake-canvas { background-color: #2c3e50; border-radius: 10px; border: 4px solid #fff; display: block; margin: 0 auto; }
+        .ttt-cell { width: 70px; height: 70px; background: #fff; border: 3px solid #006400; font-size: 40px; font-weight: bold; display: flex; align-items: center; justify-content: center; cursor: pointer; border-radius: 10px; color: #006400; }
+        #snake-canvas { background-color: #000; border-radius: 10px; border: 4px solid #006400; display: block; margin: 0 auto; }
         .snake-controls { display: flex; justify-content: center; gap: 10px; margin-top: 15px; }
-        .ctrl-btn { width: 60px; height: 60px; border-radius: 50%; font-size: 24px; font-weight: bold; }
+        .ctrl-btn { width: 60px; height: 60px; border-radius: 50%; font-size: 24px; font-weight: bold; background: #006400; color: white; border: none; }
         .wheel-container { position: relative; width: 250px; height: 250px; margin: 20px auto; }
         .wheel { width: 100%; height: 100%; border-radius: 50%; border: 8px solid #333; background: conic-gradient(#FF5733 0deg 60deg, #33FF57 60deg 120deg, #3357FF 120deg 180deg, #FF33A1 180deg 240deg, #FFD700 240deg 300deg, #33FFF5 300deg 360deg); transition: transform 4s cubic-bezier(0.17, 0.67, 0.83, 0.67); }
         .arrow { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); border-left: 15px solid transparent; border-right: 15px solid transparent; border-top: 25px solid #333; z-index: 10; }
@@ -56,10 +59,14 @@
 </head>
 <body>
 
-<!-- Navbar -->
+<!-- Navbar with Pakistan Flag Icon -->
 <nav class="navbar navbar-dark sticky-top">
     <div class="container">
-        <a class="navbar-brand" href="#" onclick="showHome()"><i class="fas fa-university"></i> Moazzam Hub</a>
+        <a class="navbar-brand" href="#" onclick="showHome()">
+            <img src="https://cdn-icons-png.flaticon.com/512/323/323301.png" width="30" height="30" class="d-inline-block align-top" alt="PK">
+            Moazzam Hub
+        </a>
+        <span class="text-white small fw-bold mt-1">Pakistan Zindabad 🇵🇰</span>
     </div>
 </nav>
 
@@ -69,18 +76,18 @@
         
         <!-- Ad Placeholder -->
         <div class="ad-box">
-            Ads Loading...
+            Ads Loading...<br><small>(Pakistani Students Area)</small>
         </div>
 
-        <h3 class="text-center fw-bold mb-4">Select Option</h3>
+        <h3 class="text-center fw-bold mb-4 text-success">Select Service</h3>
         <div class="row g-3">
             
-            <!-- 🎓 RESULT CHECKER (NEW) -->
+            <!-- 🎓 RESULT CHECKER (Updated) -->
             <div class="col-12">
-                <div class="feature-card bg-primary text-white" onclick="showSection('result-view')">
+                <div class="feature-card bg-success text-white" onclick="showSection('result-view')">
                     <div class="text-white fs-1"><i class="fas fa-poll-h"></i></div>
-                    <h4 class="mt-2 fw-bold">Check Online Result</h4>
-                    <small>9th, 10th, 11th, 12th</small>
+                    <h4 class="mt-2 fw-bold">Check Result 2025</h4>
+                    <small>Sahiwal, Lahore, Multan & All Boards</small>
                 </div>
             </div>
 
@@ -93,11 +100,11 @@
     </div>
 </div>
 
-<!-- 2. 🎓 RESULT CHECKER SECTION -->
+<!-- 2. 🎓 RESULT CHECKER SECTION (Updated with Sahiwal) -->
 <div id="result-view" class="section-view container mt-3">
-    <button class="btn btn-secondary btn-sm rounded-pill mb-3" onclick="showHome()">← Back Home</button>
+    <button class="btn btn-outline-success btn-sm rounded-pill mb-3" onclick="showHome()">← Back Home</button>
     <div class="card p-4 border-0 shadow rounded-4">
-        <h3 class="text-center fw-bold text-primary mb-3">Check Result 2025</h3>
+        <h3 class="text-center fw-bold text-success mb-3"><i class="fas fa-graduation-cap"></i> Check Result</h3>
         
         <div class="mb-3">
             <label class="fw-bold">Select Class:</label>
@@ -110,74 +117,77 @@
         </div>
 
         <div class="mb-3">
-            <label class="fw-bold">Select Board:</label>
+            <label class="fw-bold">Select Board (Punjab & Others):</label>
             <select class="form-control" id="resBoard">
+                <option value="sahiwal">BISE Sahiwal</option> <!-- Added Sahiwal Top -->
                 <option value="lahore">BISE Lahore</option>
                 <option value="rawalpindi">BISE Rawalpindi</option>
-                <option value="gujranwala">BISE Gujranwala</option>
                 <option value="multan">BISE Multan</option>
                 <option value="faisalabad">BISE Faisalabad</option>
+                <option value="gujranwala">BISE Gujranwala</option>
+                <option value="sargodha">BISE Sargodha</option>
+                <option value="bahawalpur">BISE Bahawalpur</option>
+                <option value="dgkhan">BISE D.G. Khan</option>
                 <option value="federal">FBISE Federal</option>
                 <option value="karachi">BSEK Karachi</option>
-                <option value="peshawar">BISE Peshawar</option>
             </select>
         </div>
 
         <div class="mb-3">
             <label class="fw-bold">Enter Roll Number:</label>
-            <input type="number" id="rollNo" class="form-control" placeholder="Ex: 543210">
+            <input type="number" id="rollNo" class="form-control" placeholder="Roll No likhein (e.g 123456)">
         </div>
 
-        <button class="btn btn-primary w-100 rounded-pill fw-bold py-2 shadow" onclick="checkResult()">
+        <button class="btn btn-success w-100 rounded-pill fw-bold py-2 shadow" onclick="checkResult()">
             <i class="fas fa-search"></i> Check Result Now
         </button>
 
         <!-- Loading Animation -->
         <div id="resLoading" class="mt-4 text-center text-success" style="display:none;">
-            <div class="spinner-border text-primary" role="status"></div>
-            <p class="mt-2 fw-bold">Connecting to Board Server...</p>
+            <div class="spinner-border text-success" role="status"></div>
+            <p class="mt-2 fw-bold">Connecting to BISE Server...</p>
         </div>
 
         <!-- 💰 AD BOX -->
         <div class="ad-box mt-3">
-            <script type="text/javascript" src="//pl28185755.effectivegatecpm.com/09/a8/5f/09a85fb4fd4acbfb73562548f399f7b7.js"></script>
+            Ads Loading...
         </div>
     </div>
 </div>
 
 <!-- 3. SNAKE GAME -->
 <div id="snake-view" class="section-view container mt-3 text-center">
-    <button class="btn btn-secondary btn-sm rounded-pill mb-3" onclick="showHome()">← Exit Game</button>
+    <button class="btn btn-outline-success btn-sm rounded-pill mb-3" onclick="showHome()">← Exit Game</button>
     <div class="card p-3 border-0 shadow rounded-4 bg-light">
         <h4 class="fw-bold text-success">Snake Game</h4>
         <p class="small text-muted">Score: <span id="snakeScore">0</span></p>
         <canvas id="snake-canvas" width="300" height="300"></canvas>
         <div class="snake-controls">
-            <button class="btn btn-dark ctrl-btn" onclick="changeDirection('LEFT')">←</button>
-            <div class="d-flex flex-column gap-2"><button class="btn btn-dark ctrl-btn" onclick="changeDirection('UP')">↑</button><button class="btn btn-dark ctrl-btn" onclick="changeDirection('DOWN')">↓</button></div>
-            <button class="btn btn-dark ctrl-btn" onclick="changeDirection('RIGHT')">→</button>
+            <button class="btn ctrl-btn" onclick="changeDirection('LEFT')">←</button>
+            <div class="d-flex flex-column gap-2"><button class="btn ctrl-btn" onclick="changeDirection('UP')">↑</button><button class="btn ctrl-btn" onclick="changeDirection('DOWN')">↓</button></div>
+            <button class="btn ctrl-btn" onclick="changeDirection('RIGHT')">→</button>
         </div>
     </div>
 </div>
 
 <!-- 4. TIC TAC TOE -->
 <div id="ttt-view" class="section-view container mt-3 text-center">
-    <button class="btn btn-secondary btn-sm rounded-pill mb-3" onclick="showHome()">← Back</button>
+    <button class="btn btn-outline-success btn-sm rounded-pill mb-3" onclick="showHome()">← Back</button>
     <div class="card p-4 border-0 shadow rounded-4">
-        <h4 class="fw-bold text-warning">Tic Tac Toe</h4>
-        <div id="ttt-status" class="mb-2 fw-bold text-primary">Player X's Turn</div>
+        <h4 class="fw-bold text-success">Tic Tac Toe</h4>
+        <div id="ttt-status" class="mb-2 fw-bold text-dark">Player X's Turn</div>
         <div class="ttt-board">
             <div class="ttt-cell" onclick="tttMove(0)" id="c0"></div><div class="ttt-cell" onclick="tttMove(1)" id="c1"></div><div class="ttt-cell" onclick="tttMove(2)" id="c2"></div>
             <div class="ttt-cell" onclick="tttMove(3)" id="c3"></div><div class="ttt-cell" onclick="tttMove(4)" id="c4"></div><div class="ttt-cell" onclick="tttMove(5)" id="c5"></div>
             <div class="ttt-cell" onclick="tttMove(6)" id="c6"></div><div class="ttt-cell" onclick="tttMove(7)" id="c7"></div><div class="ttt-cell" onclick="tttMove(8)" id="c8"></div>
         </div>
-        <button class="btn btn-outline-danger btn-sm mt-3" onclick="resetTTT()">Restart Game</button>
+        <button class="btn btn-danger btn-sm mt-3" onclick="resetTTT()">Restart Game</button>
     </div>
 </div>
 
 <!-- 5. SPIN WHEEL -->
 <div id="spin-view" class="section-view container mt-3 text-center">
-    <button class="btn btn-secondary btn-sm rounded-pill mb-3" onclick="showHome()">← Back</button>
+    <button class="btn btn-outline-success btn-sm rounded-pill mb-3" onclick="showHome()">← Back</button>
     <div class="card p-4 border-0 shadow rounded-4 align-items-center">
         <h3 class="fw-bold text-success">Spin & Win</h3>
         <div class="wheel-container"><div class="arrow"></div><div class="wheel" id="wheel"></div><div class="btn btn-dark position-absolute top-50 start-50 translate-middle rounded-circle p-3 fw-bold" onclick="spinWheel()" style="z-index:5;">SPIN</div></div>
@@ -187,20 +197,20 @@
 
 <!-- 6. DOWNLOADER -->
 <div id="downloader-view" class="section-view container mt-3">
-    <button class="btn btn-secondary btn-sm rounded-pill mb-3" onclick="showHome()">← Back</button>
+    <button class="btn btn-outline-success btn-sm rounded-pill mb-3" onclick="showHome()">← Back</button>
     <div class="card p-4 border-0 shadow rounded-4 text-center">
-        <h3 class="fw-bold mb-3">Video Downloader</h3>
+        <h3 class="fw-bold mb-3 text-success">Video Downloader</h3>
         <input type="text" id="dlUrl" class="form-control mb-3" placeholder="Paste Link Here...">
-        <button class="btn btn-danger w-100 rounded-pill fw-bold py-2 shadow" onclick="startDownload()">Start Download</button>
+        <button class="btn btn-success w-100 rounded-pill fw-bold py-2 shadow" onclick="startDownload()">Start Download</button>
         <div id="loadingMsg" class="mt-3 text-success fw-bold" style="display:none;"><i class="fas fa-spinner fa-spin"></i> Processing...</div>
     </div>
 </div>
 
 <!-- 7. NOTES REDIRECT -->
 <div id="student-view" class="section-view container mt-3">
-    <button class="btn btn-secondary btn-sm rounded-pill mb-3" onclick="showHome()">← Back</button>
+    <button class="btn btn-outline-success btn-sm rounded-pill mb-3" onclick="showHome()">← Back</button>
     <div class="card p-4 border-0 shadow rounded-4">
-        <h4 class="text-primary fw-bold mb-3">🔗 Official Notes Links</h4>
+        <h4 class="text-success fw-bold mb-3">🔗 Official Notes Links</h4>
         <div class="list-group">
             <a href="https://www.ilmkidunya.com/" target="_blank" class="list-group-item d-flex justify-content-between align-items-center"><span>9th/10th Notes</span> <span class="badge bg-success">Visit Site</span></a>
             <a href="https://classnotes.xyz/" target="_blank" class="list-group-item d-flex justify-content-between align-items-center"><span>11th/12th Notes</span> <span class="badge bg-success">Visit Site</span></a>
@@ -214,7 +224,7 @@
     function showSection(id) { document.querySelectorAll('.section-view').forEach(el => el.classList.remove('active-view')); document.getElementById(id).classList.add('active-view'); if(id !== 'snake-view') clearInterval(gameInterval); }
     function showHome() { showSection('home-view'); }
 
-    // 🎓 RESULT CHECKER LOGIC
+    // 🎓 RESULT CHECKER LOGIC (Updated with Sahiwal)
     function checkResult() {
         let board = document.getElementById('resBoard').value;
         let rollNo = document.getElementById('rollNo').value;
@@ -230,10 +240,15 @@
             let url = "";
             
             // Redirect to Official Board Result Pages
-            if(board === 'lahore') url = "http://result.biselahore.com/";
+            if(board === 'sahiwal') url = "https://bisesahiwal.edu.pk/all-results/";
+            else if(board === 'lahore') url = "http://result.biselahore.com/";
             else if(board === 'rawalpindi') url = "https://biserawalpindi.edu.pk/results/";
             else if(board === 'gujranwala') url = "https://bisegrw.edu.pk/";
             else if(board === 'multan') url = "https://web.bisemultan.edu.pk/results/";
+            else if(board === 'faisalabad') url = "http://result.bisefsd.edu.pk/";
+            else if(board === 'sargodha') url = "https://www.bisesargodha.edu.pk/content/BoardResult.aspx";
+            else if(board === 'bahawalpur') url = "https://bisebwp.edu.pk/";
+            else if(board === 'dgkhan') url = "https://www.bisedgkhan.edu.pk/";
             else if(board === 'federal') url = "https://www.fbise.edu.pk/result-main.php";
             else if(board === 'karachi') url = "https://bsek.edu.pk/results";
             else url = "https://www.google.com/search?q=BISE+" + board + "+result+2025";
@@ -246,7 +261,7 @@
     let canvas, ctx, gameInterval, snake = [{x: 10, y: 10}], food = {x: 15, y: 15}, dx = 0, dy = 0, score = 0, gridSize = 20, tileCount = 15;
     function initSnake() { canvas = document.getElementById('snake-canvas'); ctx = canvas.getContext('2d'); resetSnake(); gameInterval = setInterval(gameLoop, 150); }
     function gameLoop() { snake[0].x += dx; snake[0].y += dy; if(snake[0].x < 0) snake[0].x = tileCount -1; if(snake[0].x >= tileCount) snake[0].x = 0; if(snake[0].y < 0) snake[0].y = tileCount -1; if(snake[0].y >= tileCount) snake[0].y = 0;
-        ctx.fillStyle = '#2c3e50'; ctx.fillRect(0, 0, canvas.width, canvas.height); ctx.fillStyle = '#e74c3c'; ctx.fillRect(food.x * gridSize, food.y * gridSize, gridSize - 2, gridSize - 2); ctx.fillStyle = '#2ecc71';
+        ctx.fillStyle = '#000'; ctx.fillRect(0, 0, canvas.width, canvas.height); ctx.fillStyle = '#fff'; ctx.fillRect(food.x * gridSize, food.y * gridSize, gridSize - 2, gridSize - 2); ctx.fillStyle = '#11998e';
         for(let i=0; i<snake.length; i++) { ctx.fillRect(snake[i].x * gridSize, snake[i].y * gridSize, gridSize - 2, gridSize - 2); if(i > 0 && snake[i].x == snake[0].x && snake[i].y == snake[0].y) resetSnake(); }
         if(snake[0].x == food.x && snake[0].y == food.y) { score++; document.getElementById('snakeScore').innerText = score; snake.push({x: snake[snake.length-1].x, y: snake[snake.length-1].y}); food.x = Math.floor(Math.random() * tileCount); food.y = Math.floor(Math.random() * tileCount); }
         for(let i=snake.length-1; i>0; i--) { snake[i].x = snake[i-1].x; snake[i].y = snake[i-1].y; }
@@ -265,4 +280,4 @@
     function startDownload() { let u = document.getElementById('dlUrl').value.trim(); document.getElementById('loadingMsg').style.display='block'; setTimeout(() => { document.getElementById('loadingMsg').style.display='none'; if(u.includes('instagram')) window.open('https://snapinsta.to/en2'); else if(u.includes('youtu')) window.open('https://ssyoutube.com/en/watch?v='+u.split('v=')[1]); else if(u.includes('tiktok')) window.open('https://snaptik.app/'); else window.open('https://savefrom.net/'); }, 1500); }
 </script>
 </body>
-</html>
+    </html>
