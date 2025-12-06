@@ -3,30 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moazzam Hub - Pakistan Student Portal</title>
+    <title>Moazzam Hub - Pakistan Official Student Portal</title>
 
     <!-- ✅ GOOGLE VERIFICATION CODE -->
     <meta name="google-site-verification" content="grZR5ds5hHxrscm-MrGjFzVv9S1w4NlyUVL0qhQFU7w" />
     
     <!-- Meta Tags -->
-    <meta name="description" content="Check BISE Results 2025, Download Notes, Play Games & Win Prizes.">
+    <meta name="description" content="Check BISE Results 2025 (Annual/Supply). Sahiwal, Lahore, Federal & All Pakistan Boards. Download Notes & Play Games.">
     
     <!-- Libraries -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        body { background-color: #f8fff8; font-family: 'Poppins', sans-serif; padding-bottom: 120px; } /* Extra space for big footer ad */
+        body { background-color: #f4fff4; font-family: 'Poppins', sans-serif; padding-bottom: 120px; }
         
         /* Navbar */
-        .navbar { background: linear-gradient(135deg, #006400 0%, #11998e 100%); border-bottom: 4px solid #fff; }
+        .navbar { background: linear-gradient(135deg, #004d00 0%, #11998e 100%); border-bottom: 4px solid #fff; }
         .navbar-brand { font-weight: bold; color: white !important; letter-spacing: 1px; }
 
-        /* 🟢 Ad Container Styles (Glitch Free) */
+        /* Ad Container Styles */
         .ad-box {
             text-align: center; margin: 15px auto; 
             background: #fff; border: 1px dashed #006400; padding: 5px;
-            overflow: hidden; /* Glitch rokne k liye */
+            overflow: hidden; max-width: 350px;
         }
         
         /* Footer Sticky Ad (728x90) */
@@ -35,23 +35,28 @@
             background: white; text-align: center; z-index: 9999;
             box-shadow: 0 -5px 15px rgba(0,0,0,0.2); 
             display: flex; justify-content: center; align-items: center;
-            height: 100px; border-top: 2px solid #006400;
+            height: 100px; border-top: 3px solid #006400;
         }
 
-        /* Feature Cards */
+        /* Cards */
         .feature-card {
             border: none; border-radius: 15px; padding: 15px;
             background: white; text-align: center; transition: 0.3s;
             box-shadow: 0 4px 10px rgba(0,100,0,0.1); cursor: pointer; height: 100%;
         }
-        .feature-card:hover { transform: translateY(-5px); border: 1px solid #006400; background-color: #f0fff0; }
+        .feature-card:hover { transform: translateY(-5px); border: 1px solid #006400; background-color: #e8f5e9; }
 
         /* Sections */
         .section-view { display: none; animation: fadeIn 0.3s; }
         .active-view { display: block; }
         @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
 
-        /* Games & Tools Styles */
+        /* Form Styling */
+        .form-label { font-weight: bold; color: #004d00; }
+        .form-select, .form-control { border: 2px solid #a5d6a7; border-radius: 10px; }
+        .form-select:focus, .form-control:focus { border-color: #006400; box-shadow: 0 0 5px rgba(0,100,0,0.3); }
+
+        /* Game Styles */
         .ttt-board { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; max-width: 250px; margin: 20px auto; }
         .ttt-cell { width: 70px; height: 70px; background: #fff; border: 3px solid #006400; font-size: 40px; font-weight: bold; display: flex; align-items: center; justify-content: center; cursor: pointer; border-radius: 10px; color: #006400; }
         #snake-canvas { background-color: #000; border-radius: 10px; border: 4px solid #006400; display: block; margin: 0 auto; }
@@ -62,10 +67,10 @@
         .arrow { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); border-left: 15px solid transparent; border-right: 15px solid transparent; border-top: 25px solid #333; z-index: 10; }
     </style>
 
-    <!-- 📢 1. SOCIAL BAR AD (Floating) -->
+    <!-- 📢 1. SOCIAL BAR AD -->
     <script type="text/javascript" src="//pl28185755.effectivegatecpm.com/09/a8/5f/09a85fb4fd4acbfb73562548f399f7b7.js"></script>
-
-    <!-- 📢 2. NATIVE AD SCRIPT (Load once) -->
+    
+    <!-- 📢 2. NATIVE AD SCRIPT -->
     <script type="text/javascript" src="//pl28194772.effectivegatecpm.com/d8/22/16/d82216ee913fcd98eeb249ae03e49562.js"></script>
 
 </head>
@@ -86,7 +91,7 @@
 <div id="home-view" class="section-view active-view">
     <div class="container my-4">
         
-        <!-- 📢 AD BOX 1 (Native) -->
+        <!-- 📢 AD BOX -->
         <div class="ad-box">
              <script type="text/javascript" src="//pl28194772.effectivegatecpm.com/d8/22/16/d82216ee913fcd98eeb249ae03e49562.js"></script>
         </div>
@@ -98,8 +103,8 @@
             <div class="col-12">
                 <div class="feature-card bg-success text-white" onclick="showSection('result-view')">
                     <div class="text-white fs-1"><i class="fas fa-poll-h"></i></div>
-                    <h4 class="mt-2 fw-bold">Check Result 2025</h4>
-                    <small>All Punjab Boards</small>
+                    <h4 class="mt-2 fw-bold">Check Online Result</h4>
+                    <small>Sahiwal & All Pakistan Boards</small>
                 </div>
             </div>
 
@@ -113,33 +118,72 @@
     </div>
 </div>
 
-<!-- 2. RESULT CHECKER -->
+<!-- 2. 🎓 DETAILED RESULT CHECKER (UPDATED) -->
 <div id="result-view" class="section-view container mt-3">
     <button class="btn btn-outline-success btn-sm rounded-pill mb-3" onclick="showHome()">← Back Home</button>
     <div class="card p-4 border-0 shadow rounded-4">
-        <h3 class="text-center fw-bold text-success mb-3">Check Result</h3>
+        <h3 class="text-center fw-bold text-success mb-3"><i class="fas fa-university"></i> Result Portal</h3>
         
-        <!-- 📢 AD BOX (Inside Content) -->
+        <!-- 📢 AD BOX -->
         <div class="ad-box mb-3"><script type="text/javascript" src="//pl28194772.effectivegatecpm.com/d8/22/16/d82216ee913fcd98eeb249ae03e49562.js"></script></div>
 
-        <select class="form-control mb-3" id="resBoard">
-            <option value="sahiwal">BISE Sahiwal</option>
-            <option value="lahore">BISE Lahore</option>
-            <option value="multan">BISE Multan</option>
-            <option value="faisalabad">BISE Faisalabad</option>
-            <option value="gujranwala">BISE Gujranwala</option>
-            <option value="sargodha">BISE Sargodha</option>
-            <option value="bahawalpur">BISE Bahawalpur</option>
-            <option value="dgkhan">BISE D.G. Khan</option>
-            <option value="federal">FBISE Federal</option>
-            <option value="karachi">BSEK Karachi</option>
-        </select>
-        <input type="number" id="rollNo" class="form-control mb-3" placeholder="Enter Roll Number">
+        <!-- BOARD SELECT -->
+        <div class="mb-3">
+            <label class="form-label">Select Board (City):</label>
+            <select class="form-select" id="resBoard">
+                <option value="sahiwal">BISE Sahiwal (Punjab)</option>
+                <option value="lahore">BISE Lahore</option>
+                <option value="multan">BISE Multan</option>
+                <option value="faisalabad">BISE Faisalabad</option>
+                <option value="gujranwala">BISE Gujranwala</option>
+                <option value="sargodha">BISE Sargodha</option>
+                <option value="bahawalpur">BISE Bahawalpur</option>
+                <option value="dgkhan">BISE D.G. Khan</option>
+                <option value="rawalpindi">BISE Rawalpindi</option>
+                <option value="federal">FBISE Federal</option>
+                <option value="karachi">BSEK Karachi</option>
+                <option value="peshawar">BISE Peshawar</option>
+                <option value="quetta">BISE Quetta</option>
+            </select>
+        </div>
+
+        <!-- CLASS SELECT -->
+        <div class="row">
+            <div class="col-6 mb-3">
+                <label class="form-label">Class:</label>
+                <select class="form-select" id="resClass">
+                    <option value="9th">9th Class</option>
+                    <option value="10th">10th Class</option>
+                    <option value="11th">11th (1st Year)</option>
+                    <option value="12th">12th (2nd Year)</option>
+                </select>
+            </div>
+            
+            <!-- SESSION SELECT -->
+            <div class="col-6 mb-3">
+                <label class="form-label">Session:</label>
+                <select class="form-select" id="resSession">
+                    <option value="annual2025">Annual 2025</option>
+                    <option value="supply2024">Supply 2024</option>
+                    <option value="annual2024">Annual 2024</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- ROLL NO INPUT -->
+        <div class="mb-3">
+            <label class="form-label">Enter Roll Number:</label>
+            <input type="number" id="rollNo" class="form-control" placeholder="Ex: 564738">
+        </div>
         
         <button class="btn btn-success w-100 rounded-pill fw-bold py-2 shadow" onclick="checkResult()">
-            <i class="fas fa-search"></i> Check Result
+            <i class="fas fa-search"></i> Check Result Now
         </button>
-        <div id="resLoading" class="mt-3 text-center text-success" style="display:none;"><div class="spinner-border text-success"></div><p>Checking...</p></div>
+        
+        <div id="resLoading" class="mt-4 text-center text-success" style="display:none;">
+            <div class="spinner-border text-success" role="status"></div>
+            <p class="mt-2 fw-bold">Accessing Official Database...</p>
+        </div>
     </div>
 </div>
 
@@ -155,7 +199,6 @@
             <div class="d-flex flex-column gap-2"><button class="btn ctrl-btn" onclick="changeDirection('UP')">↑</button><button class="btn ctrl-btn" onclick="changeDirection('DOWN')">↓</button></div>
             <button class="btn ctrl-btn" onclick="changeDirection('RIGHT')">→</button>
         </div>
-        <!-- 📢 AD BOX -->
         <div class="ad-box mt-2"><script type="text/javascript" src="//pl28194772.effectivegatecpm.com/d8/22/16/d82216ee913fcd98eeb249ae03e49562.js"></script></div>
     </div>
 </div>
@@ -167,7 +210,6 @@
         <h3 class="fw-bold text-success">Spin & Win</h3>
         <div class="wheel-container"><div class="arrow"></div><div class="wheel" id="wheel"></div><div class="btn btn-dark position-absolute top-50 start-50 translate-middle rounded-circle p-3 fw-bold" onclick="spinWheel()" style="z-index:5;">SPIN</div></div>
         <h4 id="spin-result" class="mt-3 fw-bold text-primary">Points: 0</h4>
-        <!-- 📢 AD BOX -->
         <div class="ad-box mt-3"><script type="text/javascript" src="//pl28194772.effectivegatecpm.com/d8/22/16/d82216ee913fcd98eeb249ae03e49562.js"></script></div>
     </div>
 </div>
@@ -180,7 +222,6 @@
         <input type="text" id="dlUrl" class="form-control mb-3" placeholder="Paste Link Here...">
         <button class="btn btn-success w-100 rounded-pill fw-bold py-2 shadow" onclick="startDownload()">Start Download</button>
         <div id="loadingMsg" class="mt-3 text-success fw-bold" style="display:none;"><i class="fas fa-spinner fa-spin"></i> Processing...</div>
-        <!-- 📢 AD BOX -->
         <div class="ad-box mt-3"><script type="text/javascript" src="//pl28194772.effectivegatecpm.com/d8/22/16/d82216ee913fcd98eeb249ae03e49562.js"></script></div>
     </div>
 </div>
@@ -194,28 +235,11 @@
             <a href="https://www.ilmkidunya.com/" target="_blank" class="list-group-item d-flex justify-content-between align-items-center"><span>9th/10th Notes</span> <span class="badge bg-success">Visit Site</span></a>
             <a href="https://classnotes.xyz/" target="_blank" class="list-group-item d-flex justify-content-between align-items-center"><span>11th/12th Notes</span> <span class="badge bg-success">Visit Site</span></a>
         </div>
-        <!-- 📢 AD BOX -->
         <div class="ad-box mt-3"><script type="text/javascript" src="//pl28194772.effectivegatecpm.com/d8/22/16/d82216ee913fcd98eeb249ae03e49562.js"></script></div>
     </div>
 </div>
 
-<!-- 7. TIC TAC TOE -->
-<div id="ttt-view" class="section-view container mt-3 text-center">
-    <button class="btn btn-outline-success btn-sm rounded-pill mb-3" onclick="showHome()">← Back</button>
-    <div class="card p-4 border-0 shadow rounded-4">
-        <h4 class="fw-bold text-success">Tic Tac Toe</h4>
-        <div id="ttt-status" class="mb-2 fw-bold text-dark">Player X's Turn</div>
-        <div class="ttt-board">
-            <div class="ttt-cell" onclick="tttMove(0)" id="c0"></div><div class="ttt-cell" onclick="tttMove(1)" id="c1"></div><div class="ttt-cell" onclick="tttMove(2)" id="c2"></div>
-            <div class="ttt-cell" onclick="tttMove(3)" id="c3"></div><div class="ttt-cell" onclick="tttMove(4)" id="c4"></div><div class="ttt-cell" onclick="tttMove(5)" id="c5"></div>
-            <div class="ttt-cell" onclick="tttMove(6)" id="c6"></div><div class="ttt-cell" onclick="tttMove(7)" id="c7"></div><div class="ttt-cell" onclick="tttMove(8)" id="c8"></div>
-        </div>
-        <button class="btn btn-danger btn-sm mt-3" onclick="resetTTT()">Restart Game</button>
-    </div>
-</div>
-
 <!-- 📢 3. FOOTER STICKY AD (728x90) -->
-<!-- Yeh sabse neeche chipka rahega -->
 <div class="sticky-ad">
     <script type="text/javascript">
         atOptions = {
@@ -232,39 +256,56 @@
 <!-- LOGIC -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    // 📢 4. DIRECT LINK OPEN FUNCTION (High Earning)
+    // 📢 DIRECT LINK FUNCTION
     function openDirectAd() {
-        // Yeh link Spin or Result check karte waqt khulega
         window.open('https://www.effectivegatecpm.com/kfxuf6why?key=c38d24885b4749e1c130b314ea523fa9', '_blank');
     }
 
     function showSection(id) { document.querySelectorAll('.section-view').forEach(el => el.classList.remove('active-view')); document.getElementById(id).classList.add('active-view'); if(id !== 'snake-view') clearInterval(gameInterval); }
     function showHome() { showSection('home-view'); }
 
-    // Result Logic (With Direct Ad)
+    // 🎓 DETAILED RESULT LOGIC
     function checkResult() {
         let rollNo = document.getElementById('rollNo').value;
-        if(!rollNo) { alert("Enter Roll Number!"); return; }
+        let board = document.getElementById('resBoard').value;
+        let cls = document.getElementById('resClass').value;
         
-        openDirectAd(); // 🔥 Pehle Ad Khulega
+        if(!rollNo) { alert("Please Enter Roll Number!"); return; }
+        
+        openDirectAd(); // 🔥 Ad Open
         
         document.getElementById('resLoading').style.display='block';
+        
         setTimeout(() => {
             document.getElementById('resLoading').style.display='none';
-            let b = document.getElementById('resBoard').value;
             let u = "";
-            if(b==='sahiwal') u="https://bisesahiwal.edu.pk/all-results/";
-            else if(b==='lahore') u="http://result.biselahore.com/";
-            else if(b==='multan') u="https://web.bisemultan.edu.pk/results/";
-            else u="https://www.google.com/search?q=BISE+"+b+"+result+2025";
+            
+            // Redirect Logic for Each Board
+            if(board === 'sahiwal') u = "https://bisesahiwal.edu.pk/all-results/";
+            else if(board === 'lahore') u = "http://result.biselahore.com/";
+            else if(board === 'multan') u = "https://web.bisemultan.edu.pk/results/";
+            else if(board === 'faisalabad') u = "http://result.bisefsd.edu.pk/";
+            else if(board === 'gujranwala') u = "https://bisegrw.edu.pk/";
+            else if(board === 'sargodha') u = "https://www.bisesargodha.edu.pk/content/BoardResult.aspx";
+            else if(board === 'bahawalpur') u = "https://bisebwp.edu.pk/";
+            else if(board === 'dgkhan') u = "https://www.bisedgkhan.edu.pk/";
+            else if(board === 'rawalpindi') u = "https://biserawalpindi.edu.pk/results/";
+            else if(board === 'federal') u = "https://www.fbise.edu.pk/result-main.php";
+            else if(board === 'karachi') u = "https://bsek.edu.pk/results";
+            else if(board === 'peshawar') u = "https://www.bisep.edu.pk/results/";
+            else if(board === 'quetta') u = "https://bbiseqta.edu.pk/";
+            
+            // Backup Search if link breaks
+            if(u === "") u = "https://www.google.com/search?q=BISE+" + board + "+" + cls + "+result+check+online";
+            
             window.open(u, '_blank');
         }, 2000);
     }
 
-    // Spin Logic (With Direct Ad)
+    // Spin Logic
     let deg = 0; 
     function spinWheel() {
-        openDirectAd(); // 🔥 Spin karne par bhi Ad khulega
+        openDirectAd(); 
         let w = document.getElementById('wheel'); 
         deg += Math.floor(Math.random() * 3000) + 1800; 
         w.style.transform = `rotate(${deg}deg)`; 
@@ -287,11 +328,7 @@
     function changeDirection(dir) { if(dir === 'UP' && dy !== 1) { dx=0; dy=-1; } if(dir === 'DOWN' && dy !== -1) { dx=0; dy=1; } if(dir === 'LEFT' && dx !== 1) { dx=-1; dy=0; } if(dir === 'RIGHT' && dx !== -1) { dx=1; dy=0; } }
     function resetSnake() { snake = [{x: 10, y: 10}]; dx = 0; dy = 0; score = 0; document.getElementById('snakeScore').innerText = '0'; }
 
-    // TTT & Downloader
-    let tttBoard = ['','','','','','','','',''], tttTurn = 'X', tttActive = true;
-    function tttMove(i) { if(tttBoard[i] === '' && tttActive) { tttBoard[i] = tttTurn; document.getElementById('c' + i).innerText = tttTurn; checkTTTWin(); tttTurn = tttTurn === 'X' ? 'O' : 'X'; if(tttActive) document.getElementById('ttt-status').innerText = `Player ${tttTurn}'s Turn`; } }
-    function checkTTTWin() { const w = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]; for(let c of w) if(tttBoard[c[0]] && tttBoard[c[0]] === tttBoard[c[1]] && tttBoard[c[0]] === tttBoard[c[2]]) { document.getElementById('ttt-status').innerText = `🎉 ${tttBoard[c[0]]} WINS!`; tttActive = false; return; } }
-    function resetTTT() { tttBoard.fill(''); tttTurn = 'X'; tttActive = true; document.getElementById('ttt-status').innerText = "Player X's Turn"; for(let i=0; i<9; i++) document.getElementById('c' + i).innerText = ''; }
+    // Downloader
     function startDownload() { let u = document.getElementById('dlUrl').value.trim(); document.getElementById('loadingMsg').style.display='block'; setTimeout(() => { document.getElementById('loadingMsg').style.display='none'; if(u.includes('instagram')) window.open('https://snapinsta.to/en2'); else if(u.includes('youtu')) window.open('https://ssyoutube.com/en/watch?v='+u.split('v=')[1]); else if(u.includes('tiktok')) window.open('https://snaptik.app/'); else window.open('https://savefrom.net/'); }, 1500); }
 </script>
 </body>
