@@ -9,7 +9,7 @@
     <meta name="google-site-verification" content="grZR5ds5hHxrscm-MrGjFzVv9S1w4NlyUVL0qhQFU7w" />
     
     <!-- Meta Tags -->
-    <meta name="description" content="Check BISE Results 2025 (Annual/Supply). Sahiwal, Lahore, Federal & All Pakistan Boards. Download Notes & Play Games.">
+    <meta name="description" content="Check BISE Sahiwal, Lahore, Multan Results 2025. Download Notes & Play Games.">
     
     <!-- Libraries -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -110,14 +110,14 @@
     </div>
 </div>
 
-<!-- 2. RESULT CHECKER (LINKS FIXED) -->
+<!-- 2. RESULT CHECKER (OFFICIAL LINKS) -->
 <div id="result-view" class="section-view container mt-3">
     <button class="btn btn-outline-success btn-sm rounded-pill mb-3" onclick="showHome()">← Back Home</button>
     <div class="card p-4 border-0 shadow rounded-4">
         <h3 class="text-center fw-bold text-success mb-3"><i class="fas fa-university"></i> Result Portal</h3>
         
         <div class="alert alert-info small">
-            <strong>Note:</strong> Select Board aur Roll No likhein. Aapko Official Website par redirect kiya jayega.
+            <strong>Note:</strong> Board select karein. System aapko Official Website par le jayega jahan Result check hoga.
         </div>
 
         <!-- 📢 AD BOX -->
@@ -251,7 +251,7 @@
     function showSection(id) { document.querySelectorAll('.section-view').forEach(el => el.classList.remove('active-view')); document.getElementById(id).classList.add('active-view'); if(id !== 'snake-view') clearInterval(gameInterval); }
     function showHome() { showSection('home-view'); }
 
-    // 🎓 RESULT CHECKER (LINKS FIXED - NO CRASH)
+    // 🎓 RESULT CHECKER (OFFICIAL LINKS FIXED)
     function checkResult() {
         let rollNo = document.getElementById('rollNo').value;
         let board = document.getElementById('resBoard').value;
@@ -266,7 +266,7 @@
             document.getElementById('resLoading').style.display='none';
             let u = "";
             
-            // ✅ USING MAIN HOMEPAGES (SAFEST)
+            // 🔥 LINKS UPDATED TO MAIN HOMEPAGES (SAFEST)
             if(board === 'sahiwal') u = "https://bisesahiwal.edu.pk/";
             else if(board === 'lahore') u = "https://biselahore.com/";
             else if(board === 'multan') u = "https://web.bisemultan.edu.pk/";
@@ -280,7 +280,7 @@
             else if(board === 'karachi') u = "https://bsek.edu.pk/";
             else u = "https://www.google.com/search?q=BISE+" + board + "+result+2025";
             
-            window.location.href = u; // Redirect
+            window.location.href = u; // Redirect to Official Site
         }, 2000);
     }
 
