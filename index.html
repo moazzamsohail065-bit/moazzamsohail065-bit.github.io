@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moazzam Hub - Premium Tools</title>
+    <title>PakTools Hub - Results, Mods & Games</title>
 
-    <!-- ✅ GOOGLE VERIFICATION -->
+    <!-- ✅ GOOGLE VERIFICATION CODE -->
     <meta name="google-site-verification" content="grZR5ds5hHxrscm-MrGjFzVv9S1w4NlyUVL0qhQFU7w" />
     
-    <!-- Meta Tags -->
-    <meta name="description" content="Official Result Portal, WiFi Unlocker, 8 Ball Pool Mod & Games.">
+    <!-- Meta Tags (SEO Optimized) -->
+    <meta name="description" content="PakTools Hub: Check BISE Results 2025, Download 8 Ball Pool Mod, WiFi Tools & Study Notes. All in One Pakistani Portal.">
+    <meta name="keywords" content="PakTools, BISE Results, 8 Ball Pool Mod, PSH4XX, Video Downloader, 9th Class Result, WiFi Tools">
     
     <!-- Libraries -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -17,9 +18,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
     
     <style>
-        /* 🎨 THEME: Modern Glass (Unique & Premium) */
+        /* 🎨 THEME: Premium Glass (Light Blue/Purple) */
         body { 
-            background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%); 
+            background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%); 
             font-family: 'Poppins', sans-serif; 
             color: #333;
             padding-bottom: 120px; 
@@ -28,59 +29,41 @@
         
         /* Glass Navbar */
         .navbar { 
-            background: rgba(255, 255, 255, 0.7); 
-            backdrop-filter: blur(10px); 
-            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            background: rgba(255, 255, 255, 0.8); 
+            backdrop-filter: blur(12px); 
+            border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
-        .navbar-brand { font-weight: 800; color: #4b6cb7 !important; letter-spacing: 1px; }
+        .navbar-brand { font-weight: 800; color: #4b6cb7 !important; letter-spacing: 1px; text-transform: uppercase; }
 
-        /* ✨ PREMIUM GLASS CARDS */
+        /* ✨ GLASS CARDS */
         .feature-card { 
-            background: rgba(255, 255, 255, 0.65); 
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.8);
-            border-radius: 25px; 
+            background: rgba(255, 255, 255, 0.6); 
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            border-radius: 20px; 
             padding: 20px; 
             text-align: center; 
             transition: all 0.3s ease; 
             color: #444;
             height: 100%;
             cursor: pointer;
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
         }
         .feature-card:hover { 
             transform: translateY(-8px); 
-            background: rgba(255, 255, 255, 0.9); 
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            background: rgba(255, 255, 255, 0.95); 
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
         }
 
         /* Buttons */
         .btn-custom {
             background: linear-gradient(45deg, #667eea, #764ba2);
             border: none; color: white; font-weight: bold;
-            box-shadow: 0 4px 15px rgba(118, 75, 162, 0.4);
+            box-shadow: 0 4px 15px rgba(118, 75, 162, 0.3);
             transition: 0.3s;
         }
-        
-        /* WiFi List Style */
-        .wifi-item {
-            background: white; padding: 12px; margin-bottom: 8px;
-            border-radius: 12px; display: flex; justify-content: space-between;
-            align-items: center; cursor: pointer; transition: 0.2s;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05); border-left: 5px solid #ccc;
-        }
-        .wifi-item:hover { border-left: 5px solid #00ff00; transform: scale(1.02); }
-
-        /* Hacker Console */
-        .console-log { 
-            background: #1a1a1a; color: #00ff00; 
-            font-family: 'Courier New', monospace; 
-            padding: 15px; border-radius: 15px; 
-            height: 180px; overflow-y: auto; 
-            text-align: left; font-size: 13px; 
-            border: 2px solid #333; display: none; 
-        }
+        .btn-custom:hover { transform: scale(1.05); }
 
         /* Ad Box */
         .ad-box { 
@@ -102,6 +85,7 @@
         @keyframes zoomIn { from {opacity:0; transform: scale(0.95);} to {opacity:1; transform: scale(1);} }
 
         /* Game Styles */
+        .ttt-board { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; max-width: 250px; margin: 20px auto; }
         .ttt-cell { width: 70px; height: 70px; background: white; border: none; font-size: 35px; display: flex; align-items: center; justify-content: center; border-radius: 15px; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         .wheel-container { position: relative; width: 250px; height: 250px; margin: 20px auto; }
         .wheel { width: 100%; height: 100%; border-radius: 50%; border: 6px solid white; background: conic-gradient(#FF5733 0deg 60deg, #33FF57 60deg 120deg, #3357FF 120deg 180deg, #FF33A1 180deg 240deg, #FFD700 240deg 300deg, #33FFF5 300deg 360deg); transition: transform 4s cubic-bezier(0.17, 0.67, 0.83, 0.67); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
@@ -117,7 +101,7 @@
 <nav class="navbar navbar-light sticky-top">
     <div class="container">
         <a class="navbar-brand" href="#" onclick="showHome()">
-            <i class="fas fa-crown text-primary"></i> Moazzam Hub
+            <i class="fas fa-layer-group text-primary"></i> PakTools Hub
         </a>
     </div>
 </nav>
@@ -128,24 +112,15 @@
         
         <div class="ad-box"><script type="text/javascript" src="//pl28194772.effectivegatecpm.com/d8/22/16/d82216ee913fcd98eeb249ae03e49562.js"></script></div>
         
-        <h3 class="text-center fw-bold mb-4" style="color: #4b6cb7;">Select Tool</h3>
+        <h3 class="text-center fw-bold mb-4" style="color: #4b6cb7;">Select Option</h3>
         <div class="row g-3">
             
-            <!-- 📶 WiFi Tool -->
-            <div class="col-12">
-                <div class="feature-card" onclick="showSection('wifi-view')">
-                    <div class="fs-1 text-primary"><i class="fas fa-wifi"></i></div>
-                    <h4 class="mt-2 fw-bold text-dark">WiFi Password Unlocker</h4>
-                    <small class="text-muted">Scan Nearby Networks</small>
-                </div>
-            </div>
-
             <!-- Result -->
             <div class="col-12">
-                <div class="feature-card" style="background: rgba(255,255,255,0.8);" onclick="showSection('result-view')">
+                <div class="feature-card" style="background: rgba(255,255,255,0.9); border-color: #28a745;" onclick="showSection('result-view')">
                     <div class="fs-1 text-success"><i class="fas fa-graduation-cap"></i></div>
                     <h4 class="mt-2 fw-bold text-dark">Check Result 2025</h4>
-                    <small class="text-muted">Official Board Links</small>
+                    <small class="text-muted">All Pakistan Boards</small>
                 </div>
             </div>
 
@@ -157,54 +132,28 @@
                 </div>
             </div>
 
+            <!-- Tools -->
             <div class="col-6"><div class="feature-card" onclick="showSection('downloader-view')"><div class="fs-1 text-info"><i class="fas fa-download"></i></div><h6 class="mt-2 fw-bold">Saver</h6></div></div>
             <div class="col-6"><div class="feature-card" onclick="showSection('spin-view')"><div class="fs-1 text-danger"><i class="fas fa-dharmachakra"></i></div><h6 class="mt-2 fw-bold">Spin Win</h6></div></div>
             <div class="col-6"><div class="feature-card" onclick="showSection('student-view')"><div class="fs-1 text-secondary"><i class="fas fa-book"></i></div><h6 class="mt-2 fw-bold">Notes</h6></div></div>
             <div class="col-12"><div class="feature-card" onclick="showSection('ttt-view')"><div class="fs-1 text-warning"><i class="fas fa-th"></i></div><h6 class="mt-2 fw-bold">Tic Tac Toe</h6></div></div>
         </div>
     </div>
-</div>
-
-<!-- 📶 WIFI HACKER UI (Realistic) -->
-<div id="wifi-view" class="section-view container mt-3">
-    <button class="btn btn-light btn-sm rounded-pill mb-3" onclick="showHome()">← Back</button>
-    <div class="feature-card">
-        <h3 class="fw-bold text-primary"><i class="fas fa-router"></i> WiFi Scanner</h3>
-        <p class="small text-muted">Scan nearby 2.4Ghz/5Ghz Networks</p>
-        
-        <button class="btn btn-custom w-100 rounded-pill py-2 mb-3" onclick="startRealScan()">
-            <i class="fas fa-radar"></i> START SCANNING
-        </button>
-
-        <!-- Scanning Animation -->
-        <div id="wifiScanning" class="text-center my-3" style="display:none;">
-            <div class="spinner-border text-primary" role="status"></div>
-            <p class="text-primary mt-2">Searching frequencies...</p>
-        </div>
-
-        <!-- Realistic WiFi List (Will Auto Generate) -->
-        <div id="wifiList" class="text-start" style="display:none;"></div>
-
-        <div id="wifiConsole" class="console-log mt-3"></div>
-        <div id="wifiResult" class="mt-3 alert alert-success fw-bold text-dark" style="display:none;"></div>
-        
-        <div class="ad-box mt-3"><script type="text/javascript" src="//pl28194772.effectivegatecpm.com/d8/22/16/d82216ee913fcd98eeb249ae03e49562.js"></script></div>
-    </div>
-</div>
-
-<!-- 🎱 8 BALL POOL -->
+ </div> <!-- 🎱 8 BALL POOL -->
 <div id="pool-view" class="section-view container mt-3 text-center">
     <button class="btn btn-light btn-sm rounded-pill mb-3" onclick="showHome()">← Back</button>
     <div class="feature-card">
         <img src="https://play-lh.googleusercontent.com/bPz1guJ6Fk3w88TvzqFgpqv913rjOziGKj4tSMqv3zgs0t5p_uT8cnC3pfEtiPECaYNi=w240-h480-rw" class="img-fluid rounded mb-3" style="width: 80px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
         <h3 class="fw-bold text-dark">8 Ball Pool PSH4XX</h3>
-        <p class="small text-muted">Latest Mod Menu (Anti-Ban)</p>
+        <p class="small text-muted">Latest Mod Menu (Anti-Ban / Long Line)</p>
         <div class="ad-box mb-3"><script type="text/javascript" src="//pl28194772.effectivegatecpm.com/d8/22/16/d82216ee913fcd98eeb249ae03e49562.js"></script></div>
         <a href="https://www.mediafire.com/file/5mi4di98ev8hrcl/8Ball_pool_%2540bnkpsh4xx.apk/file" target="_blank" class="btn btn-custom w-100 rounded-pill py-3 shadow">
             <i class="fas fa-download"></i> DOWNLOAD APK
         </a>
     </div>
-            </div> <!-- RESULT CHECKER -->
+</div>
+
+<!-- RESULT CHECKER -->
 <div id="result-view" class="section-view container mt-3">
     <button class="btn btn-light btn-sm rounded-pill mb-3" onclick="showHome()">← Back</button>
     <div class="feature-card">
@@ -262,66 +211,6 @@
     function showSection(id) { document.querySelectorAll('.section-view').forEach(el => el.classList.remove('active-view')); document.getElementById(id).classList.add('active-view'); }
     function showHome() { showSection('home-view'); }
 
-    // 🔥 REALISTIC PAKISTANI WIFI GENERATOR 🔥
-    function startRealScan() {
-        document.getElementById('wifiScanning').style.display = 'block';
-        document.getElementById('wifiList').style.display = 'none';
-        document.getElementById('wifiConsole').style.display = 'none';
-        document.getElementById('wifiResult').style.display = 'none';
-        
-        setTimeout(() => {
-            document.getElementById('wifiScanning').style.display = 'none';
-            document.getElementById('wifiList').style.display = 'block';
-            generatePakistaniWifiList();
-        }, 2500);
-    }
-
-    function generatePakistaniWifiList() {
-        let listDiv = document.getElementById('wifiList');
-        listDiv.innerHTML = "";
-        
-        // Common Names in Pakistan
-        let names = ["PTCL-BB", "FiberLink_Fast", "StormFiber", "Jazz-4G", "Tenda_Home", "TP-Link_Ext", "Infinix Hotspot", "Vivo Y20", "Oppo A5s", "Zong-4G-Device", "Nayatel-Home", "Huawei_WiFi"];
-        
-        // Randomly pick 4 names
-        let randomNames = names.sort(() => 0.5 - Math.random()).slice(0, 4);
-        
-        randomNames.forEach(name => {
-            let signal = Math.random() > 0.5 ? 'text-success' : 'text-warning';
-            let item = `
-                <div class="wifi-item" onclick="crackWifi('${name}')">
-                    <span><i class="fas fa-signal ${signal}"></i> ${name}</span> 
-                    <i class="fas fa-lock text-danger"></i>
-                </div>`;
-            listDiv.innerHTML += item;
-        });
-    }
-
-    function crackWifi(name) {
-        document.getElementById('wifiList').style.display = 'none';
-        let c = document.getElementById('wifiConsole');
-        let r = document.getElementById('wifiResult');
-        c.style.display='block'; r.style.display='none'; 
-        c.innerHTML="> Target: " + name + "<br>> Initializing Handshake...";
-        
-        openDirectAd(); // Show Ad for Earning
-
-        let logs = ["Bypassing Security...", "Injecting Packets...", "Cracking WPA2 Hash...", "Key Found!"];
-        let i=0; 
-        let t=setInterval(()=>{ 
-            if(i<logs.length){ c.innerHTML+="<br>> "+logs[i]; c.scrollTop=c.scrollHeight; i++; } 
-            else { 
-                clearInterval(t); 
-                c.style.display='none'; 
-                r.style.display='block'; 
-                
-                // Realistic Password
-                let pass = Math.floor(Math.random()*90000000) + 10000000;
-                r.innerHTML="PASSWORD FOUND: <br><span class='fs-2 text-success' style='letter-spacing:2px;'>" + pass + "</span>"; 
-            } 
-        }, 1200);
-    }
-
     // Result Logic
     function checkResult() {
         let roll = document.getElementById('rollNo').value;
@@ -357,4 +246,4 @@
     function resetTTT() { tttBoard.fill(''); tttTurn = 'X'; tttActive = true; for(let i=0; i<9; i++) document.getElementById('c' + i).innerText = ''; }
 </script>
 </body>
-    </html>
+</html>
