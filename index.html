@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PakTools Hub - Results, Mods & Games</title>
+    <title>Moazzam Hub - Pro Tools & Sports</title>
 
-    <!-- ✅ GOOGLE VERIFICATION CODE -->
+    <!-- ✅ GOOGLE VERIFICATION -->
     <meta name="google-site-verification" content="grZR5ds5hHxrscm-MrGjFzVv9S1w4NlyUVL0qhQFU7w" />
     
-    <!-- Meta Tags (SEO Optimized) -->
-    <meta name="description" content="PakTools Hub: Check BISE Results 2025, Download 8 Ball Pool Mod, WiFi Tools & Study Notes. All in One Pakistani Portal.">
-    <meta name="keywords" content="PakTools, BISE Results, 8 Ball Pool Mod, PSH4XX, Video Downloader, 9th Class Result, WiFi Tools">
+    <!-- Meta Tags -->
+    <meta name="description" content="Live Cricket Scores, Result Portal 2025, WiFi Unlocker, 8 Ball Pool Mod & Games.">
     
     <!-- Libraries -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -18,52 +17,68 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
     
     <style>
-        /* 🎨 THEME: Premium Glass (Light Blue/Purple) */
+        /* 🎨 THEME: Modern Glass (Pastel) */
         body { 
-            background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%); 
+            background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%); 
             font-family: 'Poppins', sans-serif; 
             color: #333;
             padding-bottom: 120px; 
             min-height: 100vh;
         }
         
-        /* Glass Navbar */
         .navbar { 
-            background: rgba(255, 255, 255, 0.8); 
-            backdrop-filter: blur(12px); 
-            border-bottom: 1px solid rgba(255, 255, 255, 0.6);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            background: rgba(255, 255, 255, 0.7); 
+            backdrop-filter: blur(10px); 
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
-        .navbar-brand { font-weight: 800; color: #4b6cb7 !important; letter-spacing: 1px; text-transform: uppercase; }
+        .navbar-brand { font-weight: 800; color: #4b6cb7 !important; letter-spacing: 1px; }
 
-        /* ✨ GLASS CARDS */
+        /* ✨ CARDS */
         .feature-card { 
-            background: rgba(255, 255, 255, 0.6); 
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.9);
-            border-radius: 20px; 
+            background: rgba(255, 255, 255, 0.65); 
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 25px; 
             padding: 20px; 
             text-align: center; 
             transition: all 0.3s ease; 
             color: #444;
             height: 100%;
             cursor: pointer;
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
         }
         .feature-card:hover { 
             transform: translateY(-8px); 
-            background: rgba(255, 255, 255, 0.95); 
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.9); 
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
         }
 
         /* Buttons */
         .btn-custom {
             background: linear-gradient(45deg, #667eea, #764ba2);
             border: none; color: white; font-weight: bold;
-            box-shadow: 0 4px 15px rgba(118, 75, 162, 0.3);
+            box-shadow: 0 4px 15px rgba(118, 75, 162, 0.4);
             transition: 0.3s;
         }
         .btn-custom:hover { transform: scale(1.05); }
+
+        /* WiFi List & Cricket List */
+        .list-item-custom {
+            background: white; padding: 12px; margin-bottom: 8px;
+            border-radius: 12px; display: flex; justify-content: space-between;
+            align-items: center; cursor: pointer; transition: 0.2s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05); border-left: 5px solid #ccc;
+        }
+        .list-item-custom:hover { border-left-color: #667eea; transform: scale(1.02); }
+
+        /* Console */
+        .console-log { 
+            background: #1a1a1a; color: #00ff00; 
+            font-family: monospace; padding: 15px; border-radius: 15px; 
+            height: 180px; overflow-y: auto; text-align: left; font-size: 13px; 
+            display: none; 
+        }
 
         /* Ad Box */
         .ad-box { 
@@ -85,10 +100,9 @@
         @keyframes zoomIn { from {opacity:0; transform: scale(0.95);} to {opacity:1; transform: scale(1);} }
 
         /* Game Styles */
-        .ttt-board { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; max-width: 250px; margin: 20px auto; }
         .ttt-cell { width: 70px; height: 70px; background: white; border: none; font-size: 35px; display: flex; align-items: center; justify-content: center; border-radius: 15px; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         .wheel-container { position: relative; width: 250px; height: 250px; margin: 20px auto; }
-        .wheel { width: 100%; height: 100%; border-radius: 50%; border: 6px solid white; background: conic-gradient(#FF5733 0deg 60deg, #33FF57 60deg 120deg, #3357FF 120deg 180deg, #FF33A1 180deg 240deg, #FFD700 240deg 300deg, #33FFF5 300deg 360deg); transition: transform 4s cubic-bezier(0.17, 0.67, 0.83, 0.67); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        .wheel { width: 100%; height: 100%; border-radius: 50%; border: 6px solid white; background: conic-gradient(#FF5733 0deg 60deg, #33FF57 60deg 120deg, #3357FF 120deg 180deg, #FF33A1 180deg 240deg, #FFD700 240deg 300deg, #33FFF5 300deg 360deg); transition: transform 4s cubic-bezier(0.17, 0.67, 0.83, 0.67); }
         .arrow { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); border-left: 15px solid transparent; border-right: 15px solid transparent; border-top: 25px solid white; z-index: 10; }
     </style>
 
@@ -101,7 +115,7 @@
 <nav class="navbar navbar-light sticky-top">
     <div class="container">
         <a class="navbar-brand" href="#" onclick="showHome()">
-            <i class="fas fa-layer-group text-primary"></i> PakTools Hub
+            <i class="fas fa-crown text-primary"></i> Moazzam Hub
         </a>
     </div>
 </nav>
@@ -112,15 +126,31 @@
         
         <div class="ad-box"><script type="text/javascript" src="//pl28194772.effectivegatecpm.com/d8/22/16/d82216ee913fcd98eeb249ae03e49562.js"></script></div>
         
-        <h3 class="text-center fw-bold mb-4" style="color: #4b6cb7;">Select Option</h3>
+        <h3 class="text-center fw-bold mb-4" style="color: #4b6cb7;">Main Menu</h3>
         <div class="row g-3">
             
-            <!-- Result -->
+            <!-- 🏏 CRICKET (NEW) -->
             <div class="col-12">
-                <div class="feature-card" style="background: rgba(255,255,255,0.9); border-color: #28a745;" onclick="showSection('result-view')">
+                <div class="feature-card" style="background: linear-gradient(45deg, #1e3c72, #2a5298); color: white;" onclick="showSection('cricket-view')">
+                    <div class="fs-1"><i class="fas fa-baseball-ball"></i></div>
+                    <h4 class="mt-2 fw-bold">Live Cricket</h4>
+                    <small>Scores, Schedule & Results</small>
+                </div>
+            </div>
+
+            <!-- Result -->
+            <div class="col-6">
+                <div class="feature-card" onclick="showSection('result-view')">
                     <div class="fs-1 text-success"><i class="fas fa-graduation-cap"></i></div>
-                    <h4 class="mt-2 fw-bold text-dark">Check Result 2025</h4>
-                    <small class="text-muted">All Pakistan Boards</small>
+                    <h6 class="mt-2 fw-bold text-dark">Results 2025</h6>
+                </div>
+            </div>
+
+            <!-- WiFi Tool -->
+            <div class="col-6">
+                <div class="feature-card" onclick="showSection('wifi-view')">
+                    <div class="fs-1 text-primary"><i class="fas fa-wifi"></i></div>
+                    <h6 class="mt-2 fw-bold text-dark">WiFi Tool</h6>
                 </div>
             </div>
 
@@ -132,24 +162,78 @@
                 </div>
             </div>
 
-            <!-- Tools -->
             <div class="col-6"><div class="feature-card" onclick="showSection('downloader-view')"><div class="fs-1 text-info"><i class="fas fa-download"></i></div><h6 class="mt-2 fw-bold">Saver</h6></div></div>
             <div class="col-6"><div class="feature-card" onclick="showSection('spin-view')"><div class="fs-1 text-danger"><i class="fas fa-dharmachakra"></i></div><h6 class="mt-2 fw-bold">Spin Win</h6></div></div>
             <div class="col-6"><div class="feature-card" onclick="showSection('student-view')"><div class="fs-1 text-secondary"><i class="fas fa-book"></i></div><h6 class="mt-2 fw-bold">Notes</h6></div></div>
             <div class="col-12"><div class="feature-card" onclick="showSection('ttt-view')"><div class="fs-1 text-warning"><i class="fas fa-th"></i></div><h6 class="mt-2 fw-bold">Tic Tac Toe</h6></div></div>
         </div>
     </div>
- </div> <!-- 🎱 8 BALL POOL -->
+</div> 
+    <!-- 🏏 CRICKET SECTION (NEW) -->
+<div id="cricket-view" class="section-view container mt-3">
+    <button class="btn btn-light btn-sm rounded-pill mb-3" onclick="showHome()">← Back</button>
+    <div class="feature-card">
+        <h3 class="fw-bold text-primary"><i class="fas fa-trophy"></i> Cricket Zone</h3>
+        <p class="small text-muted">Live Scores & Match Schedules</p>
+        
+        <div class="ad-box mb-3"><script type="text/javascript" src="//pl28194772.effectivegatecpm.com/d8/22/16/d82216ee913fcd98eeb249ae03e49562.js"></script></div>
+
+        <!-- Live Match Button -->
+        <div class="list-item-custom bg-dark text-white mb-3" onclick="window.open('https://www.cricbuzz.com/cricket-match/live-scores', '_blank')">
+            <div class="d-flex align-items-center">
+                <span class="badge bg-danger me-2">LIVE</span>
+                <span>Check Live Scores</span>
+            </div>
+            <i class="fas fa-chevron-right"></i>
+        </div>
+
+        <!-- Options -->
+        <div class="row g-2">
+            <div class="col-6">
+                <a href="https://www.cricbuzz.com/cricket-schedule/upcoming-series/international" target="_blank" class="btn btn-outline-primary w-100 py-3">
+                    <i class="fas fa-calendar-alt"></i><br>Schedule
+                </a>
+            </div>
+            <div class="col-6">
+                <a href="https://www.cricbuzz.com/cricket-stats/points-table/test/icc-world-test-championship" target="_blank" class="btn btn-outline-success w-100 py-3">
+                    <i class="fas fa-list-ol"></i><br>Points Table
+                </a>
+            </div>
+            <div class="col-12">
+                <a href="https://www.espncricinfo.com/ci/content/story/index.html" target="_blank" class="btn btn-outline-dark w-100 py-2">
+                    <i class="fas fa-newspaper"></i> Latest Cricket News
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 📶 WIFI HACKER UI (Realistic) -->
+<div id="wifi-view" class="section-view container mt-3">
+    <button class="btn btn-light btn-sm rounded-pill mb-3" onclick="showHome()">← Back</button>
+    <div class="feature-card">
+        <h3 class="fw-bold text-primary">WiFi Scanner</h3>
+        <p class="small text-muted">Scanning 2.4Ghz/5Ghz Networks</p>
+        <button class="btn btn-custom w-100 rounded-pill py-2 mb-3" onclick="startRealScan()">START SCANNING</button>
+        <div id="wifiScanning" class="text-center my-3" style="display:none;">
+            <div class="spinner-border text-primary" role="status"></div>
+            <p class="text-primary mt-2">Searching nearby networks...</p>
+        </div>
+        <div id="wifiList" class="text-start" style="display:none;"></div>
+        <div id="wifiConsole" class="console-log mt-3"></div>
+        <div id="wifiResult" class="mt-3 alert alert-success fw-bold text-dark" style="display:none;"></div>
+    </div>
+</div>
+
+<!-- 🎱 8 BALL POOL -->
 <div id="pool-view" class="section-view container mt-3 text-center">
     <button class="btn btn-light btn-sm rounded-pill mb-3" onclick="showHome()">← Back</button>
     <div class="feature-card">
-        <img src="https://play-lh.googleusercontent.com/bPz1guJ6Fk3w88TvzqFgpqv913rjOziGKj4tSMqv3zgs0t5p_uT8cnC3pfEtiPECaYNi=w240-h480-rw" class="img-fluid rounded mb-3" style="width: 80px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+        <img src="https://play-lh.googleusercontent.com/bPz1guJ6Fk3w88TvzqFgpqv913rjOziGKj4tSMqv3zgs0t5p_uT8cnC3pfEtiPECaYNi=w240-h480-rw" class="img-fluid rounded mb-3" style="width: 80px;">
         <h3 class="fw-bold text-dark">8 Ball Pool PSH4XX</h3>
-        <p class="small text-muted">Latest Mod Menu (Anti-Ban / Long Line)</p>
-        <div class="ad-box mb-3"><script type="text/javascript" src="//pl28194772.effectivegatecpm.com/d8/22/16/d82216ee913fcd98eeb249ae03e49562.js"></script></div>
-        <a href="https://www.mediafire.com/file/5mi4di98ev8hrcl/8Ball_pool_%2540bnkpsh4xx.apk/file" target="_blank" class="btn btn-custom w-100 rounded-pill py-3 shadow">
-            <i class="fas fa-download"></i> DOWNLOAD APK
-        </a>
+        <p class="small text-muted">Latest Mod Menu (Anti-Ban)</p>
+        <a href="https://www.mediafire.com/file/5mi4di98ev8hrcl/8Ball_pool_%2540bnkpsh4xx.apk/file" target="_blank" class="btn btn-custom w-100 rounded-pill py-3 shadow"><i class="fas fa-download"></i> DOWNLOAD APK</a>
+        <div class="ad-box mt-3"><script type="text/javascript" src="//pl28194772.effectivegatecpm.com/d8/22/16/d82216ee913fcd98eeb249ae03e49562.js"></script></div>
     </div>
 </div>
 
@@ -158,7 +242,6 @@
     <button class="btn btn-light btn-sm rounded-pill mb-3" onclick="showHome()">← Back</button>
     <div class="feature-card">
         <h3 class="text-success fw-bold">Result Portal</h3>
-        <div class="ad-box mb-3"><script type="text/javascript" src="//pl28194772.effectivegatecpm.com/d8/22/16/d82216ee913fcd98eeb249ae03e49562.js"></script></div>
         <div class="mb-3">
             <label class="fw-bold">Select Board:</label>
             <select class="form-select" id="resBoard">
@@ -177,11 +260,11 @@
         </div>
         <div class="mb-3"><label class="fw-bold">Roll Number:</label><input type="number" id="rollNo" class="form-control" placeholder="123456"></div>
         <button class="btn btn-custom w-100 rounded-pill py-2" onclick="checkResult()">SEARCH RESULT</button>
-        <div id="resLoading" class="mt-4 text-center text-primary" style="display:none;"><div class="spinner-border"></div><p>Redirecting to Official Site...</p></div>
+        <div id="resLoading" class="mt-4 text-center text-primary" style="display:none;"><div class="spinner-border"></div><p>Opening Official Site...</p></div>
     </div>
 </div>
 
-<!-- OTHER TOOLS -->
+<!-- OTHER TOOLS (Simplified for space) -->
 <div id="model-view" class="section-view container mt-3"><button class="btn btn-light btn-sm mb-3" onclick="showHome()">← Back</button><div class="feature-card"><h3>Model Papers</h3><div class="list-group"><a href="https://www.ilmkidunya.com/past_papers/" target="_blank" class="list-group-item">9th/10th Papers</a><a href="https://www.ilmkidunya.com/past_papers/" target="_blank" class="list-group-item">11th/12th Papers</a></div></div></div>
 <div id="calc-view" class="section-view container mt-3"><button class="btn btn-light btn-sm mb-3" onclick="showHome()">← Back</button><div class="feature-card"><h3>% Calculator</h3><input type="number" id="obMarks" class="form-control mb-2" placeholder="Obtained"><input type="number" id="totMarks" class="form-control mb-3" placeholder="Total"><button class="btn btn-custom w-100" onclick="calcPerc()">Calculate</button><div id="calcRes" class="mt-3 h4 text-success"></div></div></div>
 <div id="spin-view" class="section-view container mt-3 text-center"><button class="btn btn-light btn-sm mb-3" onclick="showHome()">← Back</button><div class="feature-card"><h3>Spin & Win</h3><div class="wheel-container my-3"><div class="arrow"></div><div class="wheel" id="wheel"></div><div class="btn btn-dark position-absolute top-50 start-50 translate-middle rounded-circle p-3" onclick="spinWheel()">SPIN</div></div><h4 id="spin-result" class="text-warning">Points: 0</h4></div></div>
@@ -211,6 +294,36 @@
     function showSection(id) { document.querySelectorAll('.section-view').forEach(el => el.classList.remove('active-view')); document.getElementById(id).classList.add('active-view'); }
     function showHome() { showSection('home-view'); }
 
+    // WiFi Logic
+    function startRealScan() {
+        document.getElementById('wifiScanning').style.display = 'block';
+        document.getElementById('wifiList').style.display = 'none';
+        document.getElementById('wifiConsole').style.display = 'none';
+        document.getElementById('wifiResult').style.display = 'none';
+        setTimeout(() => {
+            document.getElementById('wifiScanning').style.display = 'none';
+            document.getElementById('wifiList').style.display = 'block';
+            generatePakistaniWifiList();
+        }, 2500);
+    }
+    function generatePakistaniWifiList() {
+        let listDiv = document.getElementById('wifiList'); listDiv.innerHTML = "";
+        let names = ["PTCL-BB", "FiberLink_Fast", "StormFiber", "Jazz-4G", "Tenda_Home", "TP-Link_Ext", "Infinix Hotspot", "Vivo Y20", "Oppo A5s", "Zong-4G-Device"];
+        let randomNames = names.sort(() => 0.5 - Math.random()).slice(0, 4);
+        randomNames.forEach(name => {
+            let item = `<div class="list-item-custom" onclick="crackWifi('${name}')"><span><i class="fas fa-signal text-success"></i> ${name}</span> <i class="fas fa-lock text-danger"></i></div>`;
+            listDiv.innerHTML += item;
+        });
+    }
+    function crackWifi(name) {
+        document.getElementById('wifiList').style.display = 'none';
+        let c = document.getElementById('wifiConsole'); let r = document.getElementById('wifiResult');
+        c.style.display='block'; r.style.display='none'; c.innerHTML="> Target: "+name+"<br>> Handshake...";
+        openDirectAd();
+        let logs = ["Bypassing...", "Injecting...", "Cracking...", "Found!"];
+        let i=0; let t=setInterval(()=>{ if(i<logs.length){ c.innerHTML+="<br>> "+logs[i]; c.scrollTop=c.scrollHeight; i++; } else { clearInterval(t); c.style.display='none'; r.style.display='block'; r.innerHTML="PASSWORD: <br><span class='fs-3 text-success'>"+Math.floor(Math.random()*90000000+10000000)+"</span>"; } }, 1000);
+    }
+
     // Result Logic
     function checkResult() {
         let roll = document.getElementById('rollNo').value;
@@ -219,8 +332,8 @@
         openDirectAd(); document.getElementById('resLoading').style.display='block';
         setTimeout(() => {
             let u = "";
-            if(board === 'sahiwal') u = "https://bisesahiwal.edu.pk/allresult/"; 
-            else if(board === 'lahore') u = "http://result.biselahore.com/";
+            if(board === 'sahiwal') u = "https://bisesahiwal.edu.pk/"; 
+            else if(board === 'lahore') u = "https://biselahore.com/";
             else if(board === 'multan') u = "https://web.bisemultan.edu.pk/";
             else if(board === 'faisalabad') u = "http://result.bisefsd.edu.pk/";
             else if(board === 'gujranwala') u = "https://bisegrw.edu.pk/";
