@@ -3,75 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moazzam Hub - Pakistan Education Portal</title>
+    <title>Moazzam Hub - Direct Result Portal</title>
 
     <!-- ✅ GOOGLE VERIFICATION -->
     <meta name="google-site-verification" content="grZR5ds5hHxrscm-MrGjFzVv9S1w4NlyUVL0qhQFU7w" />
     
     <!-- Meta Tags -->
-    <meta name="description" content="Official Result Portal 2025 for BISE Sahiwal & All Pakistan Boards. Download Date Sheets, Model Papers & Notes.">
+    <meta name="description" content="View BISE Results 2025 directly on Moazzam Hub. Official Result Viewer for Sahiwal & All Boards.">
     
     <!-- Libraries -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     
     <style>
-        /* 🏛️ OFFICIAL CLEAN THEME */
-        body { 
-            background-color: #f4f6f9; 
-            font-family: 'Roboto', sans-serif; 
-            padding-bottom: 100px;
-        }
+        body { background-color: #f4fff4; font-family: 'Roboto', sans-serif; padding-bottom: 120px; }
         
-        /* Official Green Navbar */
-        .navbar { 
-            background: #006400; /* Pakistan Green */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .navbar-brand { font-weight: 700; color: white !important; text-transform: uppercase; letter-spacing: 1px; }
+        .navbar { background: #006400; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .navbar-brand { font-weight: 700; color: white !important; letter-spacing: 1px; }
 
-        /* News Ticker */
-        .news-ticker {
-            background: #222; color: #fff;
-            padding: 8px 0; font-size: 14px;
-            border-bottom: 3px solid #f1c40f;
-        }
-
-        /* Professional Cards */
-        .feature-card { 
-            background: white; 
-            border: none;
-            border-radius: 8px; 
-            padding: 25px; 
-            text-align: center; 
-            transition: all 0.3s ease; 
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            height: 100%;
-            cursor: pointer;
-            border-bottom: 4px solid transparent;
-        }
-        .feature-card:hover { 
-            transform: translateY(-5px); 
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            border-bottom: 4px solid #006400;
-        }
-        .icon-box {
-            font-size: 40px; margin-bottom: 15px; color: #006400;
-        }
-
-        /* Buttons */
-        .btn-official {
-            background-color: #006400; color: white; border-radius: 5px;
-            padding: 10px 20px; font-weight: 500; border: none; width: 100%;
-        }
-        .btn-official:hover { background-color: #004d00; color: white; }
-
-        /* Ad Box (Clean) */
         .ad-box { 
-            text-align: center; margin: 20px auto; 
-            background: #fff; border: 1px solid #ddd; padding: 10px; 
-            overflow: hidden; max-width: 350px; border-radius: 5px;
+            text-align: center; margin: 15px auto; 
+            background: #fff; border: 1px solid #ddd; padding: 5px; 
+            overflow: hidden; max-width: 350px; 
         }
         
         .sticky-ad { 
@@ -79,6 +32,29 @@
             background: white; text-align: center; z-index: 9999; 
             border-top: 1px solid #ddd; height: 90px; 
             display: flex; align-items: center; justify-content: center; 
+        }
+
+        .feature-card { 
+            background: white; border: none; border-radius: 8px; 
+            padding: 20px; text-align: center; transition: 0.3s; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05); cursor: pointer; height: 100%; 
+            border-bottom: 3px solid transparent;
+        }
+        .feature-card:hover { transform: translateY(-5px); border-bottom: 3px solid #006400; }
+
+        /* 🔥 RESULT IFRAME WINDOW */
+        #resultFrameContainer {
+            display: none; /* Hidden by default */
+            margin-top: 20px;
+            border: 2px solid #006400;
+            border-radius: 10px;
+            overflow: hidden;
+            background: white;
+        }
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
         }
 
         .section-view { display: none; animation: fadeIn 0.4s; }
@@ -100,126 +76,72 @@
     </div>
 </nav>
 
-<!-- 📢 OFFICIAL NEWS TICKER -->
-<div class="news-ticker">
-    <div class="container">
-        <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
-            📢 <strong>Latest Update:</strong> BISE Sahiwal & Lahore Board 9th Class Results expected soon. | 📝 Download new Model Papers 2025 for free. | 🚀 Official Result Portal is now Live!
-        </marquee>
-    </div>
-</div>
-
 <!-- 1. HOME DASHBOARD -->
 <div id="home-view" class="section-view active-view">
-    <div class="container my-5">
+    <div class="container my-4">
         
         <div class="ad-box"><script type="text/javascript" src="//pl28194772.effectivegatecpm.com/d8/22/16/d82216ee913fcd98eeb249ae03e49562.js"></script></div>
         
-        <div class="text-center mb-5">
-            <h2 class="fw-bold text-dark">Welcome to Student Portal</h2>
-            <p class="text-muted">Pakistan's most trusted source for Results & Education Tools.</p>
-        </div>
-
         <div class="row g-4">
-            
-            <!-- Result Checker (Main) -->
-            <div class="col-md-6 col-12">
-                <div class="feature-card" onclick="showSection('result-view')">
-                    <div class="icon-box"><i class="fas fa-poll-h"></i></div>
-                    <h4 class="fw-bold">Online Results 2025</h4>
-                    <p class="text-muted small">Check Matric & Inter Results for All Boards</p>
-                    <button class="btn btn-official">Check Now</button>
-                </div>
-            </div>
-
-            <!-- Date Sheet (New) -->
-            <div class="col-6">
-                <div class="feature-card" onclick="window.open('https://www.ilmkidunya.com/datesheet/', '_blank')">
-                    <div class="icon-box"><i class="fas fa-calendar-alt"></i></div>
-                    <h6 class="fw-bold">Date Sheets</h6>
-                </div>
-            </div>
-
-            <!-- Model Papers -->
-            <div class="col-6">
-                <div class="feature-card" onclick="showSection('model-view')">
-                    <div class="icon-box"><i class="fas fa-file-alt"></i></div>
-                    <h6 class="fw-bold">Model Papers</h6>
-                </div>
-            </div>
-
-            <!-- Notes -->
-            <div class="col-6">
-                <div class="feature-card" onclick="showSection('student-view')">
-                    <div class="icon-box"><i class="fas fa-book-reader"></i></div>
-                    <h6 class="fw-bold">Study Notes</h6>
-                </div>
-            </div>
-
-            <!-- Calculator -->
-            <div class="col-6">
-                <div class="feature-card" onclick="showSection('calc-view')">
-                    <div class="icon-box"><i class="fas fa-calculator"></i></div>
-                    <h6 class="fw-bold">% Calculator</h6>
-                </div>
-            </div>
-
-            <!-- Downloader (Tool) -->
             <div class="col-12">
-                <div class="feature-card" onclick="showSection('downloader-view')">
-                    <div class="icon-box text-danger"><i class="fas fa-cloud-download-alt"></i></div>
-                    <h5 class="fw-bold">Social Media Saver</h5>
-                    <p class="small text-muted">Download Videos from TikTok, Insta, YouTube</p>
+                <div class="feature-card" onclick="showSection('result-view')">
+                    <div class="fs-1 text-success"><i class="fas fa-search"></i></div>
+                    <h4 class="mt-2 fw-bold">Check Result (Live View)</h4>
+                    <p class="text-muted small">View Result inside this website</p>
+                    <button class="btn btn-success w-100">Open Portal</button>
                 </div>
             </div>
 
+            <!-- Other Options -->
+            <div class="col-6"><div class="feature-card" onclick="showSection('model-view')"><div class="fs-1 text-primary"><i class="fas fa-file-alt"></i></div><h6 class="mt-2 fw-bold">Model Papers</h6></div></div>
+            <div class="col-6"><div class="feature-card" onclick="showSection('calc-view')"><div class="fs-1 text-warning"><i class="fas fa-calculator"></i></div><h6 class="mt-2 fw-bold">% Calculator</h6></div></div>
+            <div class="col-6"><div class="feature-card" onclick="showSection('downloader-view')"><div class="fs-1 text-danger"><i class="fas fa-cloud-download-alt"></i></div><h6 class="mt-2 fw-bold">Downloader</h6></div></div>
+            <div class="col-6"><div class="feature-card" onclick="showSection('student-view')"><div class="fs-1 text-dark"><i class="fas fa-book"></i></div><h6 class="mt-2 fw-bold">Notes</h6></div></div>
         </div>
     </div>
-</div> 
-    <!-- 2. RESULT CHECKER (Official) -->
+</div>
+
+<!-- 2. LIVE RESULT VIEWER -->
 <div id="result-view" class="section-view container mt-4">
     <button class="btn btn-secondary btn-sm mb-3" onclick="showHome()">← Back to Home</button>
     <div class="card p-4 border-0 shadow-sm">
-        <h3 class="text-center fw-bold text-success mb-3">Official Result Portal</h3>
-        <div class="ad-box mb-3"><script type="text/javascript" src="//pl28194772.effectivegatecpm.com/d8/22/16/d82216ee913fcd98eeb249ae03e49562.js"></script></div>
+        <h3 class="text-center fw-bold text-success mb-3">Live Result Viewer</h3>
         
-        <div class="row">
-            <div class="col-md-12 mb-3">
-                <label class="fw-bold">Select Board:</label>
-                <select class="form-select" id="resBoard">
-                    <option value="sahiwal">BISE Sahiwal</option>
-                    <option value="lahore">BISE Lahore</option>
-                    <option value="multan">BISE Multan</option>
-                    <option value="faisalabad">BISE Faisalabad</option>
-                    <option value="gujranwala">BISE Gujranwala</option>
-                    <option value="sargodha">BISE Sargodha</option>
-                    <option value="bahawalpur">BISE Bahawalpur</option>
-                    <option value="dgkhan">BISE D.G. Khan</option>
-                    <option value="rawalpindi">BISE Rawalpindi</option>
-                    <option value="federal">FBISE Federal</option>
-                    <option value="karachi">BSEK Karachi</option>
-                </select>
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-6 mb-3">
-                <label class="fw-bold">Class:</label>
-                <select class="form-select"><option>9th</option><option>10th</option><option>11th</option><option>12th</option></select>
-            </div>
-            <div class="col-6 mb-3">
-                <label class="fw-bold">Session:</label>
-                <select class="form-select"><option>Annual 2025</option><option>Supply 2024</option></select>
-            </div>
+        <div class="alert alert-warning small">
+            <strong>Note:</strong> Select Board. Result website will open <strong>below</strong>. 
+            <br> (Agar neeche box khali aye, to "Open Full Screen" dabayein).
         </div>
 
         <div class="mb-3">
-            <label class="fw-bold">Enter Roll Number:</label>
-            <input type="number" id="rollNo" class="form-control" placeholder="Example: 564738">
+            <label class="fw-bold">Select Board:</label>
+            <select class="form-select" id="resBoard">
+                <option value="https://bisesahiwal.edu.pk/allresult/">BISE Sahiwal</option>
+                <option value="http://result.biselahore.com/">BISE Lahore</option>
+                <option value="https://web.bisemultan.edu.pk/results/">BISE Multan</option>
+                <option value="http://result.bisefsd.edu.pk/">BISE Faisalabad</option>
+                <option value="https://bisegrw.edu.pk/">BISE Gujranwala</option>
+                <option value="https://www.bisesargodha.edu.pk/content/BoardResult.aspx">BISE Sargodha</option>
+                <option value="https://bisebwp.edu.pk/">BISE Bahawalpur</option>
+                <option value="https://www.bisedgkhan.edu.pk/">BISE D.G. Khan</option>
+                <option value="https://biserawalpindi.edu.pk/results/">BISE Rawalpindi</option>
+                <option value="https://www.fbise.edu.pk/result-main.php">FBISE Federal</option>
+            </select>
         </div>
         
-        <button class="btn btn-official py-2" onclick="checkResult()">Find Result</button>
-        <div id="resLoading" class="mt-4 text-center text-primary" style="display:none;"><div class="spinner-border"></div><p class="mt-2">Connecting to Board Database...</p></div>
+        <button class="btn btn-success w-100 py-2 fw-bold" onclick="loadResult()">
+            <i class="fas fa-eye"></i> View Result Here
+        </button>
+
+        <!-- 🔥 MAGIC WINDOW (IFRAME) 🔥 -->
+        <div id="resultFrameContainer">
+            <div class="bg-light p-2 text-end border-bottom">
+                <small class="me-2">Not working?</small>
+                <button class="btn btn-sm btn-outline-dark" onclick="openFullScreen()">Open Full Screen ↗</button>
+            </div>
+            <iframe id="resFrame" src=""></iframe>
+        </div>
+
+        <div class="ad-box mt-3 mx-auto"><script type="text/javascript" src="//pl28194772.effectivegatecpm.com/d8/22/16/d82216ee913fcd98eeb249ae03e49562.js"></script></div>
     </div>
 </div>
 
@@ -227,14 +149,13 @@
 <div id="model-view" class="section-view container mt-4">
     <button class="btn btn-secondary btn-sm mb-3" onclick="showHome()">← Back</button>
     <div class="card p-4 border-0 shadow-sm">
-        <h3 class="text-center fw-bold mb-3">Model Papers 2025</h3>
+        <h3 class="text-center fw-bold text-primary mb-3">Model Papers 2025</h3>
         <div class="list-group">
-            <a href="https://www.ilmkidunya.com/past_papers/" target="_blank" class="list-group-item d-flex justify-content-between align-items-center"><span>9th Class Papers</span> <span class="badge bg-success">PDF</span></a>
-            <a href="https://www.ilmkidunya.com/past_papers/" target="_blank" class="list-group-item d-flex justify-content-between align-items-center"><span>10th Class Papers</span> <span class="badge bg-success">PDF</span></a>
-            <a href="https://www.ilmkidunya.com/past_papers/" target="_blank" class="list-group-item d-flex justify-content-between align-items-center"><span>1st Year Papers</span> <span class="badge bg-success">PDF</span></a>
-            <a href="https://www.ilmkidunya.com/past_papers/" target="_blank" class="list-group-item d-flex justify-content-between align-items-center"><span>2nd Year Papers</span> <span class="badge bg-success">PDF</span></a>
+            <a href="https://www.ilmkidunya.com/past_papers/" target="_blank" class="list-group-item d-flex justify-content-between align-items-center"><span>9th Class Papers</span> <span class="badge bg-primary">View</span></a>
+            <a href="https://www.ilmkidunya.com/past_papers/" target="_blank" class="list-group-item d-flex justify-content-between align-items-center"><span>10th Class Papers</span> <span class="badge bg-primary">View</span></a>
+            <a href="https://www.ilmkidunya.com/past_papers/" target="_blank" class="list-group-item d-flex justify-content-between align-items-center"><span>11th Class Papers</span> <span class="badge bg-primary">View</span></a>
+            <a href="https://www.ilmkidunya.com/past_papers/" target="_blank" class="list-group-item d-flex justify-content-between align-items-center"><span>12th Class Papers</span> <span class="badge bg-primary">View</span></a>
         </div>
-        <div class="ad-box mt-3"><script type="text/javascript" src="//pl28194772.effectivegatecpm.com/d8/22/16/d82216ee913fcd98eeb249ae03e49562.js"></script></div>
     </div>
 </div>
 
@@ -245,9 +166,8 @@
         <h3 class="text-center fw-bold mb-3">Percentage Calculator</h3>
         <label>Obtained Marks:</label><input type="number" id="obMarks" class="form-control mb-2" placeholder="Ex: 950">
         <label>Total Marks:</label><input type="number" id="totMarks" class="form-control mb-3" placeholder="Ex: 1100">
-        <button class="btn btn-official" onclick="calcPerc()">Calculate</button>
+        <button class="btn btn-success w-100" onclick="calcPerc()">Calculate</button>
         <div id="calcRes" class="mt-3 text-center fw-bold fs-4 text-success"></div>
-        <div class="ad-box mt-3"><script type="text/javascript" src="//pl28194772.effectivegatecpm.com/d8/22/16/d82216ee913fcd98eeb249ae03e49562.js"></script></div>
     </div>
 </div>
 
@@ -256,11 +176,9 @@
     <button class="btn btn-secondary btn-sm mb-3" onclick="showHome()">← Back</button>
     <div class="card p-4 border-0 shadow-sm text-center">
         <h3 class="fw-bold mb-3">Video Downloader</h3>
-        <p class="text-muted small">TikTok, Instagram, YouTube, Facebook</p>
         <input type="text" id="dlUrl" class="form-control mb-3" placeholder="Paste Link Here...">
         <button class="btn btn-danger w-100 py-2" onclick="startDownload()">Download Video</button>
         <div id="loadingMsg" class="mt-3 text-success fw-bold" style="display:none;"><i class="fas fa-spinner fa-spin"></i> Processing...</div>
-        <div class="ad-box mt-3"><script type="text/javascript" src="//pl28194772.effectivegatecpm.com/d8/22/16/d82216ee913fcd98eeb249ae03e49562.js"></script></div>
     </div>
 </div>
 
@@ -268,14 +186,11 @@
 <div id="student-view" class="section-view container mt-4">
     <button class="btn btn-secondary btn-sm mb-3" onclick="showHome()">← Back</button>
     <div class="card p-4 border-0 shadow-sm">
-        <h4 class="text-center fw-bold mb-3">Study Notes & Books</h4>
+        <h4 class="text-center fw-bold mb-3">Study Notes</h4>
         <div class="list-group">
-            <a href="https://www.ilmkidunya.com/" target="_blank" class="list-group-item d-flex justify-content-between align-items-center"><span>9th Class Notes</span> <span class="badge bg-primary">Open</span></a>
-            <a href="https://www.ilmkidunya.com/" target="_blank" class="list-group-item d-flex justify-content-between align-items-center"><span>10th Class Notes</span> <span class="badge bg-primary">Open</span></a>
-            <a href="https://classnotes.xyz/" target="_blank" class="list-group-item d-flex justify-content-between align-items-center"><span>11th Class Notes</span> <span class="badge bg-primary">Open</span></a>
-            <a href="https://classnotes.xyz/" target="_blank" class="list-group-item d-flex justify-content-between align-items-center"><span>12th Class Notes</span> <span class="badge bg-primary">Open</span></a>
+            <a href="https://www.ilmkidunya.com/" target="_blank" class="list-group-item">9th/10th Notes</a>
+            <a href="https://classnotes.xyz/" target="_blank" class="list-group-item">11th/12th Notes</a>
         </div>
-        <div class="ad-box mt-3"><script type="text/javascript" src="//pl28194772.effectivegatecpm.com/d8/22/16/d82216ee913fcd98eeb249ae03e49562.js"></script></div>
     </div>
 </div>
 
@@ -294,33 +209,26 @@
     function showSection(id) { document.querySelectorAll('.section-view').forEach(el => el.classList.remove('active-view')); document.getElementById(id).classList.add('active-view'); }
     function showHome() { showSection('home-view'); }
 
-    // Result Logic
-    function checkResult() {
-        let roll = document.getElementById('rollNo').value;
-        let board = document.getElementById('resBoard').value;
-        if(!roll) { alert("Please Enter Roll Number!"); return; }
-        openDirectAd(); document.getElementById('resLoading').style.display='block';
-        setTimeout(() => {
-            let u = "";
-            if(board === 'sahiwal') u = "https://bisesahiwal.edu.pk/"; 
-            else if(board === 'lahore') u = "http://result.biselahore.com/";
-            else if(board === 'multan') u = "https://web.bisemultan.edu.pk/";
-            else if(board === 'faisalabad') u = "http://result.bisefsd.edu.pk/";
-            else if(board === 'gujranwala') u = "https://bisegrw.edu.pk/";
-            else if(board === 'sargodha') u = "https://www.bisesargodha.edu.pk/";
-            else if(board === 'bahawalpur') u = "https://bisebwp.edu.pk/";
-            else if(board === 'dgkhan') u = "https://www.bisedgkhan.edu.pk/";
-            else if(board === 'rawalpindi') u = "https://biserawalpindi.edu.pk/";
-            else if(board === 'federal') u = "https://www.fbise.edu.pk/";
-            else if(board === 'karachi') u = "https://bsek.edu.pk/";
-            else u = "https://www.google.com/search?q=BISE+" + board + "+result+2025";
-            window.location.href = u;
-        }, 2000);
+    // 🔥 RESULT VIEWER LOGIC (IFRAME)
+    function loadResult() {
+        let url = document.getElementById('resBoard').value;
+        let frameContainer = document.getElementById('resultFrameContainer');
+        let frame = document.getElementById('resFrame');
+        
+        openDirectAd(); // Show Ad
+        
+        // Show the window
+        frameContainer.style.display = 'block';
+        frame.src = url;
+    }
+
+    function openFullScreen() {
+        let url = document.getElementById('resBoard').value;
+        window.open(url, '_blank');
     }
 
     function calcPerc() { let o=document.getElementById('obMarks').value; let t=document.getElementById('totMarks').value; if(o&&t) document.getElementById('calcRes').innerText = "Result: "+(o/t*100).toFixed(2)+"%"; }
-    
-    function startDownload() { let u=document.getElementById('dlUrl').value.trim(); document.getElementById('loadingMsg').style.display='block'; setTimeout(()=>{ document.getElementById('loadingMsg').style.display='none'; if(u.includes('instagram')) window.open('https://snapinsta.to/en2'); else if(u.includes('youtu')) window.open('https://ssyoutube.com/en/watch?v='+u.split('v=')[1]); else if(u.includes('tiktok')) window.open('https://snaptik.app/'); else window.open('https://savefrom.net/'); }, 1500); }
+    function startDownload() { let u=document.getElementById('dlUrl').value.trim(); document.getElementById('loadingMsg').style.display='block'; setTimeout(()=>{ document.getElementById('loadingMsg').style.display='none'; if(u.includes('instagram')) window.open('https://snapinsta.to/en2'); else window.open('https://savefrom.net/'); }, 1500); }
 </script>
 </body>
-</html>
+                                                                             </html>
