@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moazzam Hub - Official Portal</title>
+    <title>Moazzam Hub - Official Services</title>
 
     <!-- ✅ GOOGLE VERIFICATION -->
     <meta name="google-site-verification" content="grZR5ds5hHxrscm-MrGjFzVv9S1w4NlyUVL0qhQFU7w" />
     
     <!-- Meta Tags -->
-    <meta name="description" content="Download 8 Ball Pool Mods (3 Line & PSH4XX), Check BISE Results 2025, Model Papers & Notes.">
+    <meta name="description" content="Check Punjab e-Challan, BISE Results 2025, Date Sheets & Download Notes.">
     
     <!-- Libraries -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -17,73 +17,62 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     
     <style>
-        /* 🏛️ OFFICIAL CLEAN THEME */
+        /* 🏛️ OFFICIAL THEME */
         body { 
-            background-color: #f8f9fa; 
+            background-color: #f4f6f9; 
             font-family: 'Roboto', sans-serif; 
-            padding-bottom: 120px;
+            padding-bottom: 100px;
         }
         
         /* Navbar */
-        .navbar { 
-            background: #006400; /* Pakistan Green */
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        .navbar { background: #006400; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .navbar-brand { font-weight: 700; color: white !important; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* News Ticker */
+        .news-ticker {
+            background: #222; color: #fff;
+            padding: 8px 0; font-size: 14px;
+            border-bottom: 3px solid #f1c40f;
         }
-        .navbar-brand { font-weight: 700; color: white !important; letter-spacing: 1px; }
 
         /* Professional Cards */
         .feature-card { 
-            background: white; 
-            border: 1px solid #e0e0e0;
-            border-radius: 12px; 
-            padding: 20px; 
-            text-align: center; 
-            transition: all 0.3s ease; 
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            height: 100%;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
+            background: white; border: none; border-radius: 8px; 
+            padding: 20px; text-align: center; transition: 0.3s; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05); height: 100%; 
+            cursor: pointer; border-bottom: 4px solid transparent;
         }
         .feature-card:hover { 
             transform: translateY(-5px); 
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
             border-bottom: 4px solid #006400;
         }
-        
         .icon-box { font-size: 35px; margin-bottom: 10px; color: #006400; }
 
         /* Buttons */
         .btn-official {
-            background-color: #006400; color: white; border-radius: 50px;
-            padding: 10px 25px; font-weight: bold; border: none; width: 100%;
-            box-shadow: 0 4px 6px rgba(0,100,0,0.2);
+            background-color: #006400; color: white; border-radius: 5px;
+            padding: 10px 20px; font-weight: 500; border: none; width: 100%;
         }
         .btn-official:hover { background-color: #004d00; color: white; }
-
-        .btn-download {
-            background: linear-gradient(45deg, #2193b0, #6dd5ed);
-            color: white; border: none; border-radius: 8px; padding: 12px;
-            font-weight: bold; width: 100%; margin-top: 10px;
-        }
 
         /* Ad Box */
         .ad-box { 
             text-align: center; margin: 20px auto; 
-            background: #fff; border: 1px dashed #ccc; padding: 5px; 
-            overflow: hidden; max-width: 350px; border-radius: 8px;
+            background: #fff; border: 1px solid #ddd; padding: 10px; 
+            overflow: hidden; max-width: 350px; border-radius: 5px;
         }
         
         .sticky-ad { 
             position: fixed; left: 0; bottom: 0; width: 100%; 
             background: white; text-align: center; z-index: 9999; 
-            border-top: 2px solid #006400; height: 90px; 
+            border-top: 1px solid #ddd; height: 90px; 
             display: flex; align-items: center; justify-content: center; 
         }
 
         .section-view { display: none; animation: fadeIn 0.4s; }
         .active-view { display: block; }
-        @keyframes fadeIn { from {opacity:0; transform: translateY(10px);} to {opacity:1; transform: translateY(0);} }
+        @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
     </style>
 
     <!-- 📢 ADS SCRIPTS -->
@@ -92,7 +81,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-dark sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
         <a class="navbar-brand" href="#" onclick="showHome()">
             <i class="fas fa-university me-2"></i> Moazzam Hub
@@ -100,37 +89,57 @@
     </div>
 </nav>
 
+<!-- NEWS TICKER -->
+<div class="news-ticker">
+    <div class="container">
+        <marquee behavior="scroll" direction="left">
+            📢 <strong>New Feature:</strong> Check Punjab Traffic e-Challan Online! | 🎓 BISE Results 2025 Updates. | 📝 Download Model Papers Free.
+        </marquee>
+    </div>
+</div>
+
 <!-- 1. HOME DASHBOARD -->
 <div id="home-view" class="section-view active-view">
-    <div class="container my-4">
+    <div class="container my-5">
         
         <div class="ad-box"><script type="text/javascript" src="//pl28194772.effectivegatecpm.com/d8/22/16/d82216ee913fcd98eeb249ae03e49562.js"></script></div>
         
-        <h4 class="fw-bold text-secondary mb-4 border-start border-5 border-success ps-3">Main Menu</h4>
+        <div class="text-center mb-4">
+            <h2 class="fw-bold text-dark">Online Services</h2>
+            <p class="text-muted">Education & Public Utility Tools</p>
+        </div>
+
         <div class="row g-3">
             
-            <!-- Result Checker -->
+            <!-- Result Checker (Main) -->
             <div class="col-12">
                 <div class="feature-card" onclick="showSection('result-view')">
                     <div class="icon-box"><i class="fas fa-poll-h"></i></div>
-                    <h5 class="fw-bold text-dark">Official Results 2025</h5>
-                    <p class="text-muted small mb-0">BISE Sahiwal, Lahore & All Boards</p>
+                    <h4 class="fw-bold">Online Results 2025</h4>
+                    <p class="text-muted small">Check Matric & Inter Results for All Boards</p>
+                    <button class="btn btn-official">Check Now</button>
                 </div>
             </div>
 
-            <!-- 🎱 8 BALL POOL MODS (UPDATED) -->
-            <div class="col-12">
-                <div class="feature-card" style="border: 1px solid #2193b0;" onclick="showSection('pool-view')">
-                    <div class="d-flex align-items-center justify-content-center mb-2">
-                        <i class="fas fa-dot-circle text-info fs-1 me-2"></i>
-                        <h4 class="fw-bold text-dark m-0">8 Ball Pool Mods</h4>
-                    </div>
-                    <p class="text-danger fw-bold small">🔥 PSH4XX & 3-Line Hack Available</p>
-                    <button class="btn btn-sm btn-outline-dark rounded-pill px-4">Open Downloads</button>
+            <!-- 🚗 E-CHALLAN CHECK (NEW ADDED) -->
+            <div class="col-6">
+                <div class="feature-card" onclick="window.open('https://echallan.psca.gop.pk/?vehicle', '_blank')">
+                    <div class="icon-box text-danger"><i class="fas fa-car"></i></div>
+                    <h6 class="fw-bold">e-Challan</h6>
+                    <small class="text-muted">Check Fine</small>
                 </div>
             </div>
 
-            <!-- Other Tools -->
+            <!-- Date Sheet -->
+            <div class="col-6">
+                <div class="feature-card" onclick="window.open('https://www.ilmkidunya.com/datesheet/', '_blank')">
+                    <div class="icon-box"><i class="fas fa-calendar-alt"></i></div>
+                    <h6 class="fw-bold">Date Sheets</h6>
+                    <small class="text-muted">Exam Dates</small>
+                </div>
+            </div>
+
+            <!-- Model Papers -->
             <div class="col-6">
                 <div class="feature-card" onclick="showSection('model-view')">
                     <div class="icon-box"><i class="fas fa-file-alt"></i></div>
@@ -138,6 +147,15 @@
                 </div>
             </div>
 
+            <!-- Notes -->
+            <div class="col-6">
+                <div class="feature-card" onclick="showSection('student-view')">
+                    <div class="icon-box"><i class="fas fa-book-reader"></i></div>
+                    <h6 class="fw-bold">Study Notes</h6>
+                </div>
+            </div>
+
+            <!-- Calculator -->
             <div class="col-6">
                 <div class="feature-card" onclick="showSection('calc-view')">
                     <div class="icon-box"><i class="fas fa-calculator"></i></div>
@@ -145,6 +163,7 @@
                 </div>
             </div>
 
+            <!-- Downloader -->
             <div class="col-6">
                 <div class="feature-card" onclick="showSection('downloader-view')">
                     <div class="icon-box"><i class="fas fa-download"></i></div>
@@ -152,133 +171,93 @@
                 </div>
             </div>
 
-            <div class="col-6">
-                <div class="feature-card" onclick="showSection('student-view')">
-                    <div class="icon-box"><i class="fas fa-book"></i></div>
-                    <h6 class="fw-bold">Notes</h6>
-                </div>
-            </div>
         </div>
     </div>
 </div>
-<!-- 🎱 8 BALL POOL MODS (NEW SECTION) -->
-<div id="pool-view" class="section-view container mt-3">
-    <button class="btn btn-secondary btn-sm mb-3 rounded-pill" onclick="showHome()">← Back Home</button>
-    
-    <div class="text-center mb-4">
-        <h3 class="fw-bold text-dark">8 Ball Pool Mods</h3>
-        <p class="text-muted small">Latest Anti-Ban Versions 2025</p>
-    </div>
-
-    <div class="ad-box mb-3"><script type="text/javascript" src="//pl28194772.effectivegatecpm.com/d8/22/16/d82216ee913fcd98eeb249ae03e49562.js"></script></div>
-
-    <!-- Mod 1: 3 Line Hack -->
-    <div class="card p-3 border-0 shadow-sm mb-3">
-        <div class="d-flex align-items-center">
-            <div class="bg-light p-3 rounded-circle me-3">
-                <i class="fas fa-ruler-combined text-primary fs-2"></i>
-            </div>
-            <div class="text-start">
-                <h5 class="fw-bold m-0">Shoaib xD Mod</h5>
-                <small class="text-success fw-bold">3 Line Hack (Long Line)</small>
-            </div>
-        </div>
-        <a href="https://www.mediafire.com/file/n613kyew6ioorfc/Shoaib_xD_%255B_8_Ball_Pool_%255D_%25281%2529.apk/file?dkey=l90j1sosca3&r=1343" target="_blank" onclick="openDirectAd()" class="btn btn-download mt-3">
-            <i class="fas fa-download"></i> Download (3 Line)
-        </a>
-    </div>
-
-    <!-- Mod 2: PSH4XX Hack -->
-    <div class="card p-3 border-0 shadow-sm">
-        <div class="d-flex align-items-center">
-            <div class="bg-light p-3 rounded-circle me-3">
-                <i class="fas fa-robot text-danger fs-2"></i>
-            </div>
-            <div class="text-start">
-                <h5 class="fw-bold m-0">PSH4XX Mod</h5>
-                <small class="text-danger fw-bold">Auto Play & Aim Assist</small>
-            </div>
-        </div>
-        <a href="https://www.mediafire.com/file/5mi4di98ev8hrcl/8Ball_pool_%2540bnkpsh4xx.apk/file" target="_blank" onclick="openDirectAd()" class="btn btn-download mt-3" style="background: linear-gradient(45deg, #eb3349, #f45c43);">
-            <i class="fas fa-download"></i> Download (PSH4XX)
-        </a>
-    </div>
-</div>
-
-<!-- 2. RESULT CHECKER (IFRAME) -->
-<div id="result-view" class="section-view container mt-3">
-    <button class="btn btn-secondary btn-sm mb-3 rounded-pill" onclick="showHome()">← Back Home</button>
+<!-- 2. RESULT CHECKER (Official) -->
+<div id="result-view" class="section-view container mt-4">
+    <button class="btn btn-secondary btn-sm mb-3" onclick="showHome()">← Back to Home</button>
     <div class="card p-4 border-0 shadow-sm">
-        <h3 class="text-center fw-bold text-success mb-3">Live Result Viewer</h3>
-        <div class="alert alert-light border small text-center">
-            Select Board below. Result will open inside this page.
+        <h3 class="text-center fw-bold text-success mb-3">Official Result Portal</h3>
+        <div class="ad-box mb-3"><script type="text/javascript" src="//pl28194772.effectivegatecpm.com/d8/22/16/d82216ee913fcd98eeb249ae03e49562.js"></script></div>
+        
+        <div class="mb-3">
+            <label class="fw-bold">Select Board:</label>
+            <select class="form-select" id="resBoard">
+                <option value="https://bisesahiwal.edu.pk/allresult/">BISE Sahiwal</option>
+                <option value="http://result.biselahore.com/">BISE Lahore</option>
+                <option value="https://web.bisemultan.edu.pk/results/">BISE Multan</option>
+                <option value="http://result.bisefsd.edu.pk/">BISE Faisalabad</option>
+                <option value="https://bisegrw.edu.pk/">BISE Gujranwala</option>
+                <option value="https://www.bisesargodha.edu.pk/content/BoardResult.aspx">BISE Sargodha</option>
+                <option value="https://bisebwp.edu.pk/">BISE Bahawalpur</option>
+                <option value="https://www.bisedgkhan.edu.pk/">BISE D.G. Khan</option>
+                <option value="https://biserawalpindi.edu.pk/results/">BISE Rawalpindi</option>
+                <option value="https://www.fbise.edu.pk/result-main.php">FBISE Federal</option>
+            </select>
+        </div>
+        
+        <div class="row">
+            <div class="col-6 mb-3"><label class="fw-bold">Class:</label><select class="form-select"><option>9th</option><option>10th</option><option>11th</option><option>12th</option></select></div>
+            <div class="col-6 mb-3"><label class="fw-bold">Session:</label><select class="form-select"><option>Annual 2025</option><option>Supply</option></select></div>
         </div>
 
-        <select class="form-select mb-3" id="resBoard">
-            <option value="https://bisesahiwal.edu.pk/allresult/">BISE Sahiwal</option>
-            <option value="http://result.biselahore.com/">BISE Lahore</option>
-            <option value="https://web.bisemultan.edu.pk/results/">BISE Multan</option>
-            <option value="http://result.bisefsd.edu.pk/">BISE Faisalabad</option>
-            <option value="https://bisegrw.edu.pk/">BISE Gujranwala</option>
-            <option value="https://www.bisesargodha.edu.pk/content/BoardResult.aspx">BISE Sargodha</option>
-            <option value="https://bisebwp.edu.pk/">BISE Bahawalpur</option>
-            <option value="https://www.bisedgkhan.edu.pk/">BISE D.G. Khan</option>
-            <option value="https://biserawalpindi.edu.pk/results/">BISE Rawalpindi</option>
-            <option value="https://www.fbise.edu.pk/result-main.php">FBISE Federal</option>
-        </select>
+        <div class="mb-3"><label class="fw-bold">Enter Roll Number:</label><input type="number" id="rollNo" class="form-control" placeholder="Example: 564738"></div>
         
         <button class="btn btn-official py-2" onclick="loadResult()">Check Result</button>
-
+        
         <div id="resultFrameContainer" class="mt-3 border rounded overflow-hidden" style="display:none; height: 600px;">
             <iframe id="resFrame" src="" style="width:100%; height:100%; border:none;"></iframe>
         </div>
-        
         <button class="btn btn-outline-dark btn-sm mt-2 w-100" onclick="openFullScreen()">Open in Full Screen ↗</button>
     </div>
 </div>
 
 <!-- 3. MODEL PAPERS -->
-<div id="model-view" class="section-view container mt-3">
+<div id="model-view" class="section-view container mt-4">
     <button class="btn btn-secondary btn-sm mb-3" onclick="showHome()">← Back</button>
     <div class="card p-4 border-0 shadow-sm">
-        <h4 class="text-center fw-bold text-primary mb-3">Model Papers 2025</h4>
+        <h3 class="text-center fw-bold mb-3">Model Papers 2025</h3>
         <div class="list-group">
-            <a href="https://www.ilmkidunya.com/past_papers/" target="_blank" class="list-group-item d-flex justify-content-between align-items-center"><span>9th Class</span> <span class="badge bg-primary">PDF</span></a>
-            <a href="https://www.ilmkidunya.com/past_papers/" target="_blank" class="list-group-item d-flex justify-content-between align-items-center"><span>10th Class</span> <span class="badge bg-primary">PDF</span></a>
-            <a href="https://www.ilmkidunya.com/past_papers/" target="_blank" class="list-group-item d-flex justify-content-between align-items-center"><span>11th Class</span> <span class="badge bg-primary">PDF</span></a>
-            <a href="https://www.ilmkidunya.com/past_papers/" target="_blank" class="list-group-item d-flex justify-content-between align-items-center"><span>12th Class</span> <span class="badge bg-primary">PDF</span></a>
+            <a href="https://www.ilmkidunya.com/past_papers/" target="_blank" class="list-group-item d-flex justify-content-between align-items-center"><span>9th Class Papers</span> <span class="badge bg-success">PDF</span></a>
+            <a href="https://www.ilmkidunya.com/past_papers/" target="_blank" class="list-group-item d-flex justify-content-between align-items-center"><span>10th Class Papers</span> <span class="badge bg-success">PDF</span></a>
+            <a href="https://www.ilmkidunya.com/past_papers/" target="_blank" class="list-group-item d-flex justify-content-between align-items-center"><span>1st Year Papers</span> <span class="badge bg-success">PDF</span></a>
+            <a href="https://www.ilmkidunya.com/past_papers/" target="_blank" class="list-group-item d-flex justify-content-between align-items-center"><span>2nd Year Papers</span> <span class="badge bg-success">PDF</span></a>
         </div>
+        <div class="ad-box mt-3"><script type="text/javascript" src="//pl28194772.effectivegatecpm.com/d8/22/16/d82216ee913fcd98eeb249ae03e49562.js"></script></div>
     </div>
 </div>
 
 <!-- 4. CALCULATOR -->
-<div id="calc-view" class="section-view container mt-3">
+<div id="calc-view" class="section-view container mt-4">
     <button class="btn btn-secondary btn-sm mb-3" onclick="showHome()">← Back</button>
     <div class="card p-4 shadow-sm border-0">
-        <h4 class="text-center fw-bold mb-3">Percentage Calculator</h4>
-        <input type="number" id="obMarks" class="form-control mb-2" placeholder="Obtained Marks">
-        <input type="number" id="totMarks" class="form-control mb-3" placeholder="Total Marks">
+        <h3 class="text-center fw-bold mb-3">Percentage Calculator</h3>
+        <label>Obtained Marks:</label><input type="number" id="obMarks" class="form-control mb-2" placeholder="Ex: 950">
+        <label>Total Marks:</label><input type="number" id="totMarks" class="form-control mb-3" placeholder="Ex: 1100">
         <button class="btn btn-official" onclick="calcPerc()">Calculate</button>
         <div id="calcRes" class="mt-3 text-center fw-bold fs-4 text-success"></div>
     </div>
 </div>
 
 <!-- 5. DOWNLOADER -->
-<div id="downloader-view" class="section-view container mt-3">
+<div id="downloader-view" class="section-view container mt-4">
     <button class="btn btn-secondary btn-sm mb-3" onclick="showHome()">← Back</button>
     <div class="card p-4 border-0 shadow-sm text-center">
-        <h4 class="fw-bold mb-3">Video Downloader</h4>
+        <h3 class="fw-bold mb-3">Video Downloader</h3>
+        <p class="text-muted small">TikTok, Instagram, YouTube, Facebook</p>
         <input type="text" id="dlUrl" class="form-control mb-3" placeholder="Paste Link Here...">
         <button class="btn btn-danger w-100 py-2" onclick="startDownload()">Download Video</button>
         <div id="loadingMsg" class="mt-3 text-success fw-bold" style="display:none;"><i class="fas fa-spinner fa-spin"></i> Processing...</div>
+        <div class="ad-box mt-3"><script type="text/javascript" src="//pl28194772.effectivegatecpm.com/d8/22/16/d82216ee913fcd98eeb249ae03e49562.js"></script></div>
     </div>
 </div>
 
 <!-- 6. NOTES -->
-<div id="student-view" class="section-view container mt-3">
+<div id="student-view" class="section-view container mt-4">
     <button class="btn btn-secondary btn-sm mb-3" onclick="showHome()">← Back</button>
     <div class="card p-4 border-0 shadow-sm">
-        <h4 class="text-center fw-bold mb-3">Official Notes</h4>
+        <h4 class="text-center fw-bold mb-3">Study Notes</h4>
         <div class="list-group">
             <a href="https://www.ilmkidunya.com/" target="_blank" class="list-group-item">9th/10th Notes</a>
             <a href="https://classnotes.xyz/" target="_blank" class="list-group-item">11th/12th Notes</a>
@@ -301,7 +280,7 @@
     function showSection(id) { document.querySelectorAll('.section-view').forEach(el => el.classList.remove('active-view')); document.getElementById(id).classList.add('active-view'); }
     function showHome() { showSection('home-view'); }
 
-    // Result Logic
+    // Result Logic (IFRAME)
     function loadResult() {
         let url = document.getElementById('resBoard').value;
         openDirectAd();
@@ -311,7 +290,7 @@
     function openFullScreen() { window.open(document.getElementById('resBoard').value, '_blank'); }
 
     function calcPerc() { let o=document.getElementById('obMarks').value; let t=document.getElementById('totMarks').value; if(o&&t) document.getElementById('calcRes').innerText = "Result: "+(o/t*100).toFixed(2)+"%"; }
-    function startDownload() { let u=document.getElementById('dlUrl').value.trim(); document.getElementById('loadingMsg').style.display='block'; setTimeout(()=>{ document.getElementById('loadingMsg').style.display='none'; if(u.includes('instagram')) window.open('https://snapinsta.to/en2'); else window.open('https://savefrom.net/'); }, 1500); }
+    function startDownload() { let u=document.getElementById('dlUrl').value.trim(); document.getElementById('loadingMsg').style.display='block'; setTimeout(()=>{ document.getElementById('loadingMsg').style.display='none'; if(u.includes('instagram')) window.open('https://snapinsta.to/en2'); else if(u.includes('youtu')) window.open('https://ssyoutube.com/en/watch?v='+u.split('v=')[1]); else if(u.includes('tiktok')) window.open('https://snaptik.app/'); else window.open('https://savefrom.net/'); }, 1500); }
 </script>
 </body>
 </html>
